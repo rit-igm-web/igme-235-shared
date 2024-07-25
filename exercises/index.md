@@ -10,7 +10,7 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
 2. [Good Web Practices Hunt](good-web-practices.md)
     - Work in teams to find websites that exhibit characteristics such as good accessibility and excellent performance. Present your findings in a class presentation, highlighting the practices that you found.
 
-3. [Initial Markup](./exercises/initial-markup.md)
+3. [Initial Markup](initial-markup.md)
     - Create a new folder and an HTML file. Add the basic HTML structure manually, including `!DOCTYPE`, `<html>`, `<head>`, and `<body>` tags.
 
 4. [Add Image & Styles](./exercises/image-styles.html)
