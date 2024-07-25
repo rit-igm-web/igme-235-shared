@@ -4,7 +4,7 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
 
 ---
 
-1. [Browse Past Projects](./exercises/past-projects.html)
+1. [Browse Past Projects](./exercises/past-projects.md)
     - Review past student projects to get an idea of what to expect. Explore various games and experiences created by students from previous semesters.
 
 2. [Good Web Practices Hunt](./exercises/good-web-practices.html)
