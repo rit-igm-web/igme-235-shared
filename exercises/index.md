@@ -9,7 +9,7 @@ Here is the order of the first few exercises:
 1. [projects.md](projects.md)
 2. [good-practices.md](good-practices.md)
 3. [initial-markup.md](initial-markup.md)
-4. [images-style.md](images-style.md)
+4. [image-styles.md](image-styles.md)
 5. [validation.md](validation.md)
 6. [semantic.md](semantic.md)
 7. [links.md](links.md)
