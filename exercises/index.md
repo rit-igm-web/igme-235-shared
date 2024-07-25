@@ -5,10 +5,10 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
 ---
 
 1. [Browse Past Projects](./exercises/past-projects.html)
-    - Review past student projects to get an idea of what to expect. Explore various games created by students from previous semesters.
+    - Review past student projects to get an idea of what to expect. Explore various games and experiences created by students from previous semesters.
 
 2. [Good Web Practices Hunt](./exercises/good-web-practices.html)
-    - Work in teams to find websites that exhibit good accessibility or excellent performance. Present your findings in a class presentation, highlighting the accessibility features or performance differences between similar websites.
+    - Work in teams to find websites that exhibit characteristics such as good accessibility and excellent performance. Present your findings in a class presentation, highlighting the practices that you found.
 
 3. [Initial Markup](./exercises/initial-markup.html)
     - Create a new folder and an HTML file. Add the basic HTML structure manually, including `!DOCTYPE`, `<html>`, `<head>`, and `<body>` tags.
@@ -56,5 +56,5 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
     - Search for a responsive website and analyze its features, such as fluid layouts, breakpoints, and responsive typography. Post your findings in a class channel for participation credit.
 
 18. [Tetris Grid](./exercises/tetris-grid.html)
-    - Create a flex-based menu with rollover effects and responsive design. Add a sub-menu and ensure it is usable on mobile devices by adjusting widths and applying media queries.
+    - Develop a grid-based layout using CSS Grid and Flexbox. Start by normalizing your CSS. Create a responsive layout that adjusts between mobile and wider screens. Replace text with an image using CSS techniques, and build a dropdown menu with Flexbox. Finally, create an interactive Tetris grid, positioning elements, and adding hover effects and transitions for interactivity.
 
