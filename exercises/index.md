@@ -7,7 +7,7 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
 1. [Browse Past Projects](past-projects.md)
     - Review past student projects to get an idea of what to expect. Explore various games and experiences created by students from previous semesters.
 
-2. [Good Web Practices Hunt](./exercises/good-web-practices.md)
+2. [Good Web Practices Hunt](good-web-practices.md)
     - Work in teams to find websites that exhibit characteristics such as good accessibility and excellent performance. Present your findings in a class presentation, highlighting the practices that you found.
 
 3. [Initial Markup](./exercises/initial-markup.html)
