@@ -4,57 +4,57 @@ Welcome to the exercises directory! Here, you'll find some of the exercises that
 
 ---
 
-1. [Browse Past Projects](past-projects.md)
+1. [Browse Past Projects](projects.md)
     - Review past student projects to get an idea of what to expect. Explore various games and experiences created by students from previous semesters.
 
-2. [Good Web Practices Hunt](good-web-practices.md)
+2. [Good Web Practices Hunt](good-practices.md)
     - Work in teams to find websites that exhibit characteristics such as good accessibility and excellent performance. Present your findings in a class presentation, highlighting the practices that you found.
 
 3. [Initial Markup](initial-markup.md)
     - Create a new folder and an HTML file. Add the basic HTML structure manually, including `!DOCTYPE`, `<html>`, `<head>`, and `<body>` tags.
 
-4. [Add Image & Styles](./exercises/image-styles.html)
+4. [Add Image & Styles](image-styles.md)
     - Download an image and add it to your HTML page using the `<img>` element. Add some basic styles to your page and preview the results.
 
-5. [Validation](./exercises/validation.html)
+5. [Validation](validation.md)
     - Validate your HTML page using an online validator. Correct any errors found during validation. Optionally, try validating provided messy code to practice error correction.
 
-6. [Structural and Semantic HTML](./exercises/semantic-html.html)
+6. [Structural and Semantic HTML](semantic.md)
     - Enhance your HTML by organizing it with semantic tags like `<main>`, `<header>`, and `<footer>`. Add inline elements for additional formatting and ensure proper use of blockquote for quotes.
 
-7. [Links](./exercises/links.html)
+7. [Links](links.md)
     - Organize your file structure and create internal and external links. Link between different pages and sections within your site, and ensure external links open in a new tab.
 
-8. [Adding Images](./exercises/adding-images.html)
+8. [Adding Images](images.md)
     - Edit images using an image editor to crop and resize them before adding them to your page. Add the Dig Dug logo and apply styles to ensure transparency and appropriate display.
 
-9. [Adding More Images](./exercises/adding-more-images.html)
+9. [Adding More Images](more-images.md)
     - Add an SVG image to your page and create a favicon using an online tool. Experiment with different methods to include SVG images in your HTML.
 
-10. [Starting Styles](./exercises/starting-styles.html)
+10. [Starting Styles](styles.md)
     - Apply basic styles to your HTML elements using CSS. Float images to the right and apply a consistent margin. Use classes to style multiple elements at once.
 
-11. [Formatting Text](./exercises/text.html)
+11. [Formatting Text](text.md)
     - Apply fonts to your page using CSS. Add a Google Web Font for headings and experiment with universal selectors and descendant selectors to style specific elements.
 
-12. [Colors](./exercises/colors.html)
+12. [Colors](colors.md)
     - Generate a color palette from an image and apply these colors to your page. Use background colors for different sections and ensure text remains legible against these backgrounds.
 
-13. [The Box Model](./exercises/box-model.html)
+13. [The Box Model](boxmodel.md)
     - Apply padding, margins, and borders to your elements to better understand the CSS box model. Center elements on the page and ensure content does not overlap.
 
-14. [The end of Dig Dug](./exercises/end-of-digdug.html)
+14. [The end of Dig Dug](end-of-digdug.md)
     - Finalize and submit your Dig Dug project. Ensure all elements are properly organized and functional before zipping and submitting your project folder.
 
-15. [Floats & Positioning](./exercises/floats-positioning.html)
+15. [Floats & Positioning](floatposition.md)
     - Use CSS to float elements and position them on the page. Apply borders, widths, and margins to floated elements and ensure proper layout using the clear property.
 
-16. [Flexbox](./exercises/flexbox.html)
+16. [Flexbox](flexbox.md)
     - Use Flexbox to layout elements in a responsive manner. Apply properties to control the growth and shrinkage of items and ensure they wrap correctly on smaller screens.
 
-17. [Responsive Web Design Webhunt](./exercises/rwd-webhunt.html)
+17. [Responsive Web Design Webhunt](rwd-webhunt.md)
     - Search for a responsive website and analyze its features, such as fluid layouts, breakpoints, and responsive typography. Post your findings in a class channel for participation credit.
 
-18. [Tetris Grid](./exercises/tetris-grid.html)
+18. [Tetris Grid](tetris-grid.md)
     - Develop a grid-based layout using CSS Grid and Flexbox. Start by normalizing your CSS. Create a responsive layout that adjusts between mobile and wider screens. Replace text with an image using CSS techniques, and build a dropdown menu with Flexbox. Finally, create an interactive Tetris grid, positioning elements, and adding hover effects and transitions for interactivity.
 
