@@ -17,7 +17,6 @@ For this exercise, we'd like you to explore some sample projects from the last f
 - https://people.rit.edu/rcc3452/IGME-235/project1/ [(spec)](https://people.rit.edu/rcc3452/IGME-235/project1/spec.html) [(doc)](https://people.rit.edu/rcc3452/IGME-235/project1/doc.html)
 - https://people.rit.edu/myw4072/Projects/project1/ [(spec)](https://people.rit.edu/myw4072/Projects/project1/spec.html) [(doc)](https://people.rit.edu/myw4072/Projects/project1/doc.html)
 - https://people.rit.edu/lfp9381/235/project1/ [(spec)](https://people.rit.edu/lfp9381/235/project1/spec.html) [(doc)](https://people.rit.edu/lfp9381/235/project1/doc.html)
-- https://people.rit.edu/jws8554/235/project1/ [(spec)](https://people.rit.edu/jws8554/235/project1/spec.html) [(doc)](https://people.rit.edu/jws8554/235/project1/doc.html)
 - https://people.rit.edu/iah7731/235/project1/ [(spec)](https://people.rit.edu/iah7731/235/project1/spec.html) [(doc)](https://people.rit.edu/iah7731/235/project1/doc.html)
 - https://people.rit.edu/tdh5759/235/project1/ [(spec)](https://people.rit.edu/tdh5759/235/project1/spec.html) [(doc)](https://people.rit.edu/tdh5759/235/project1/doc.html)
 - https://people.rit.edu/jkl7075/235/project1/ [(spec)](https://people.rit.edu/jkl7075/235/project1/spec.html) [(doc)](https://people.rit.edu/jkl7075/235/project1/doc.html)
@@ -77,9 +76,7 @@ For this exercise, we'd like you to explore some sample projects from the last f
 #### Fall 2021 Project 2s
 - https://people.rit.edu/dgn8758/235/project2/
 - https://people.rit.edu/cls8941/235/project2/
-- https://people.rit.edu/mjb1504/235/project2/
 - https://people.rit.edu/ajb8344/235/anime-finder/index.html
-- https://people.rit.edu/jar5927/235/project2/project2.html
 - https://people.rit.edu/blg9406/235/project2/project2.html
 - https://people.rit.edu/acf6919/235/project2/project2.html#results
 
