@@ -35,5 +35,5 @@ This can be a team exercise.  **If you are present for the in-person Lab**, your
 2. Harder: Present your site using a Screen Recorder.  This is something you'll need to be able to do toward the end of the semester, so it may be worth practicing now, but I realize you're probably busy.  I also don't have time to explain it much except to point you to [this (one of many!) video tutorial about how to record your screen with Open Broadcaster Software](https://www.youtube.com/watch?v=WsNsd5QdOhE) (this one is pretty short and to the point for just doing a simple screen recording)  After recording, upload to YouTube, set to Unlisted (not Private), and share the URL in the "#exercise-sites" Slack channel.
 
 ## After presentations are over:
-- **In-Person Teams**: Have someone on the team post the URL to the "#exercise-sites" Slack channel with a short explanation so that those who couldn't be here can see what you found.
+- **In-Person Teams**: Have someone on the team post the URL to the "#235-exercise-sites" Slack channel with a short explanation so that those who couldn't be here can see what you found.
 - **All**: If you found another, or your own good example in one of these categories, add it to the same Slack channel with an explanation for why you picked it.  You can do this at any point later in the semester as well.  The channel will stay open.
