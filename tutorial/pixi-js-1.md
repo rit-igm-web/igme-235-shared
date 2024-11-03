@@ -106,6 +106,7 @@ Here is your first PixiJS program. Note that we are importing the PixiJS library
 **or**
 
 Set it when you initiate the app with the `init` method like so:
+
 `await app.init({ background: "#ff00ff", width: 640, height: 360 });`
 
 
