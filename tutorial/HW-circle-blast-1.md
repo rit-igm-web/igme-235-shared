@@ -82,7 +82,7 @@ Take a look at what you have:
 
 ![Screenshot](_images/circle-blast-4.png)
 
-- If you don't want to type in the URLs for the 2 libraries, then google "CDN Pixi" and "CDN Howler" to find and copy/paste the URLs yourself. **For now, we still recommend that you, stick to Pixi Version 6. Pixi Version 7 is new last semester and may not match up perfectly with some of our materials.**
+- If you don't want to type in the URLs for the 2 libraries, then google "CDN Pixi" and "CDN Howler" to find and copy/paste the URLs yourself.
 
 ### Is everything imported?
 
@@ -176,7 +176,7 @@ function setup() {
 - We have set up all of our "script scope" variables that we will need for the completed game.
 - Note that we are starting the game - by calling `setup()` - AFTER we have pre-loaded all of our image assets.
 
-- **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen). The messages in the console won't appear when using PIXI v7, but you can examine the value of PIXI.VERSION in the console if you wish:**
+- **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen). The messages in the console won't appear when using PIXI v7+, but you can examine the value of PIXI.VERSION in the console if you wish:**
 
 ![Screenshot](_images/circle-blast-6.png)
 
