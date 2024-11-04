@@ -91,48 +91,21 @@ Load the **game.html** page into a browser. To verify that you imported these li
 // We will use `strict mode`, which helps us by having the browser catch many common JS mistakes
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 "use strict";
-const app = new PIXI.Application({
-    width: 600,
-    height: 600
-});
-document.body.appendChild(app.view);
+const app = new PIXI.Application();
+await app.init({ width: 600, height: 600 });
 
-// constants
-const sceneWidth = app.view.width;
-const sceneHeight = app.view.height;	
+document.body.appendChild(app.canvas);
 
-// pre-load the images (this code works with PIXI v6)
-app.loader.
-    add([
-        "images/spaceship.png",
-        "images/explosions.png"
-    ]);
-app.loader.onProgress.add(e => { console.log(`progress=${e.progress}`) });
-app.loader.onComplete.add(setup);
-app.loader.load();
-
-// pre-load the images (this code works with PIXI v7)
-// let assets;
-// loadImages();
-// async function loadImages(){
-// // https://github.com/pixijs/pixijs/wiki/v7-Migration-Guide#-replaces-loader-with-assets
-// // https://pixijs.io/guides/basics/assets.html
-// PIXI.Assets.addBundle('sprites', {
-//   spaceship: 'images/spaceship.png',
-//   explosions: 'images/explosions.png',
-//   move: 'images/move.png'
-// });
-//
-// assets = await PIXI.Assets.loadBundle('sprites');
-// setup();
-// }
+const screenWidth = app.renderer.width;
+const screenHeight = app.renderer.height;
 
 // aliases
 let stage;
+let assets;
 
 // game variables
 let startScene;
-let gameScene,ship,scoreLabel,lifeLabel,shootSound,hitSound,fireballSound;
+let gameScene, ship, scoreLabel, lifeLabel, shootSound, hitSound, fireballSound;
 let gameOverScene;
 
 let circles = [];
@@ -145,34 +118,54 @@ let life = 100;
 let levelNum = 1;
 let paused = true;
 
-function setup() {
-	stage = app.stage;
-	// #1 - Create the `start` scene
-	
-	// #2 - Create the main `game` scene and make it invisible
+// Load all assets
+loadImages();
 
-	// #3 - Create the `gameOver` scene and make it invisible
-	
-	// #4 - Create labels for all 3 scenes
-	
-	// #5 - Create ship
-	
-	// #6 - Load Sounds
-	
-	// #7 - Load sprite sheet
-		
-	// #8 - Start update loop
-	
-	// #9 - Start listening for click events on the canvas
-	
-	// Now our `startScene` is visible
-	// Clicking the button calls startGame()
+async function loadImages() {
+  // https://pixijs.com/8.x/guides/components/assets#loading-multiple-assets
+  PIXI.Assets.addBundle("sprites", {
+    spaceship: "images/spaceship.png",
+    explosions: "images/explosions.png",
+    move: "images/move.png",
+  });
+
+  // The second argument is a callback function that is called whenever the loader makes progress.
+  assets = await PIXI.Assets.loadBundle("sprites", (progress) => {
+    console.log(`progress=${(progress * 100).toFixed(2)}%`); // 0.4288 => 42.88%
+  });
+
+  setup();
+}
+
+function setup() {
+  stage = app.stage;
+
+  // #1 - Create the `start` scene
+
+  // #2 - Create the main `game` scene and make it invisible
+
+  // #3 - Create the `gameOver` scene and make it invisible
+
+  // #4 - Create labels for all 3 scenes
+
+  // #5 - Create ship
+
+  // #6 - Load Sounds
+
+  // #7 - Load sprite sheet
+
+  // #8 - Start update loop
+
+  // #9 - Start listening for click events on the canvas
+
+  // Now our `startScene` is visible
+  // Clicking the button calls startGame()
 }
 ```
 
 - We also created a new PIXI application, and then appended the `view` (a &lt;canvas> tag) to the document.
 - We have set up all of our "script scope" variables that we will need for the completed game.
-- Note that we are starting the game - by calling `setUp()` - AFTER we have pre-loaded all of our image assets.
+- Note that we are starting the game - by calling `setup()` - AFTER we have pre-loaded all of our image assets.
 
 
 - **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen).  The messages in the console won't appear when using PIXI v7, but you can examine the value of PIXI.VERSION in the console if you wish:**
@@ -236,31 +229,27 @@ If you try to preview the results you will get an error because we didn't write 
 - **Let's write the code for the "game over" scene - add this to the end of `createLabelsAndButtons()`. Here's all the code you need - for your copy & paste pleasure:**
 
 ```javascript
-// 3 - set up `gameOverScene`
 // 3A - make game over text
-let gameOverText = new PIXI.Text("Game Over!\n        :-O");
-textStyle = new PIXI.TextStyle({
-	fill: 0xFFFFFF,
-	fontSize: 64,
-	fontFamily: "Futura",
-	stroke: 0xFF0000,
-	strokeThickness: 6
+let gameOverText = new PIXI.Text("Game Over!\n        :-O", {
+  fill: 0xffffff,
+  fontSize: 64,
+  fontFamily: "Futura",
+  stroke: 0xff0000,
+  strokeThickness: 6,
 });
-gameOverText.style = textStyle;
-gameOverText.x = 100;
-gameOverText.y = sceneHeight/2 - 160;
+gameOverText.x = screenWidth / 2 - gameOverText.width / 2;
+gameOverText.y = screenHeight / 2 - 160;
 gameOverScene.addChild(gameOverText);
 
 // 3B - make "play again?" button
-let playAgainButton = new PIXI.Text("Play Again?");
-playAgainButton.style = buttonStyle;
-playAgainButton.x = 150;
-playAgainButton.y = sceneHeight - 100;
+let playAgainButton = new PIXI.Text("Play Again?", buttonStyle);
+playAgainButton.x = screenWidth / 2 - playAgainButton.width / 2;
+playAgainButton.y = screenHeight - 100;
 playAgainButton.interactive = true;
 playAgainButton.buttonMode = true;
-playAgainButton.on("pointerup",startGame); // startGame is a function reference
-playAgainButton.on('pointerover',e=>e.target.alpha = 0.7); // concise arrow function with no brackets
-playAgainButton.on('pointerout',e=>e.currentTarget.alpha = 1.0); // ditto
+playAgainButton.on("pointerup", startGame); // startGame is a function reference
+playAgainButton.on("pointerover", (e) => (e.target.alpha = 0.7)); // concise arrow function with no brackets
+playAgainButton.on("pointerout", (e) => (e.currentTarget.alpha = 1.0)); // ditto
 gameOverScene.addChild(playAgainButton);
 ```
 
@@ -278,11 +267,11 @@ Now we need to create a spaceship that the player can control. We will first cre
 
 ### Create the ship instance
 
-- Add the following to `setUp(){...}` in **main.js**:
+- Add the following to `setup(){...}` in **main.js**:
 
 ```javascript
 // #5 - Create ship
-ship = new Ship();
+ship = new Ship(assets);
 gameScene.addChild(ship);
 ```
 
@@ -293,20 +282,20 @@ gameScene.addChild(ship);
 In this game we are using the [Howler](https://github.com/goldfire/howler.js/) audio library, which uses the high-performance Web Audio API to play audio files.
 (Recall that you imported this library at the top of the **game.html** file).
 
-- Add this code to `setUp(){...}` in **main.js**:
+- Add this code to `setup(){...}` in **main.js**:
 
 ```javascript
 // #6 - Load Sounds
 shootSound = new Howl({
-	src: ['sounds/shoot.wav']
+  src: ["sounds/shoot.wav"],
 });
 
 hitSound = new Howl({
-	src: ['sounds/hit.mp3']
+  src: ["sounds/hit.mp3"],
 });
 
 fireballSound = new Howl({
-	src: ['sounds/fireball.mp3']
+  src: ["sounds/fireball.mp3"],
 });
 ```
 
