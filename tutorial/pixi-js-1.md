@@ -41,11 +41,11 @@ X. [Review Exercise](#section10)
 ## I. <a id="section1">PixiJS Resources
 PixiJS has fantastic example code and an active community of developers. Here are some helpful links:
 
-- http://www.pixijs.com/gallery
 - http://www.pixijs.com
-- https://pixijs.download/v6.1.3/docs/index.html
-- http://pixijs.github.io/examples/#/basics/basic.js
-- http://pixijs.download/release/docs/index.html
+- http://www.pixijs.com/gallery
+- https://pixijs.download/release/docs/index.html
+- https://pixijs.com/8.x/examples
+- https://pixijs.com/8.x/guides
 - http://www.pixijs.com/tutorials
 
 
@@ -72,28 +72,22 @@ Here is your first PixiJS program. Note that we are importing the PixiJS library
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>PixiJS-1</title>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-</head>
-<body>
-<script>
+  <head>
+    <meta charset="utf-8" />
+    <title>PixiJS-1</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      // #1 - Create a new Pixi application
+      // https://pixijs.download/release/docs/app.Application.html
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
 
-// #1 - Create a new Pixi application
-// https://pixijs.download/release/docs/PIXI.Application.html
-const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-
-// #2 - Append its "view" (a <canvas> tag that it created for us) to the DOM
-document.body.appendChild(app.view); 
-
-</script>
-</body>
+      // #2 - Append its "view" (a <canvas> tag that it created for us) to the DOM
+      document.body.appendChild(app.canvas);
+    </script>
+  </body>
 </html>
 
 ```
@@ -104,15 +98,20 @@ document.body.appendChild(app.view);
 ### Notes
 - You should see the 600x400 black canvas that PixiJS created for us in the browser
 - You should also see this canvas in the Web Inspector
-- You should see a log to the console that shows the rendering method being used (Canvas or WebGL)
 - *Can you re-position the &lt;canvas> tag?* Sure, just use CSS style rules.
 - *Can you change the background color to something other than black?* Sure! With this line of code:
 
-`app.renderer.backgroundColor = 0xFF00FF; // Magenta!`
+`app.renderer.background.color = 0xff00ff; // Magenta!`
+
+**or**
+
+Set it when you initiate the app with the `init` method like so:
+
+`await app.init({ background: "#ff00ff", width: 640, height: 360 });`
 
 
 ## III. <a id="section3">Drawing Shapes
-We can use PixiJS to create geometric shapes using PIXI.Graphics - http://pixijs.download/release/docs/PIXI.Graphics.html
+We can use PixiJS to create geometric shapes using PIXI.Graphics - https://pixijs.download/release/docs/scene.Graphics.html
 
 ### pixi-intro-2.html
 
@@ -120,44 +119,38 @@ We can use PixiJS to create geometric shapes using PIXI.Graphics - http://pixijs
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>PixiJS-2</title>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-</head>
-<body>
-<script>
-const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-document.body.appendChild(app.view); 
+  <head>
+    <meta charset="utf-8" />
+    <title>PixiJS-2</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
+      document.body.appendChild(app.canvas);
 
-// #1 - make a square
-// https://pixijs.download/release/docs/PIXI.Graphics.html
-const square = new PIXI.Graphics();
-square.beginFill(0xFF0000); 	// red in hexadecimal
-square.lineStyle(3,0xFFFF00,1); // lineWidth,color in hex, alpha
-square.drawRect(0,0,40,40); 	// x,y,width,height
-square.endFill();
-square.x = 25;
-square.y = 50;
-app.stage.addChild(square);  	// now you can see it
+      // #1 - Create a square
+      // https://pixijs.download/release/docs/scene.Graphics.html
+      const square = new PIXI.Graphics();
+      square.rect(0, 0, 40, 40); // x, y, width, height
+      square.fill(0xff0000); // red in hex
+      square.x = 25;
+      square.y = 50;
+      square.stroke({ width: 2, color: 0xffff00, alpha: 1 }); // yellow border
 
-// #2 make a circle
-let radius = 20;
-const circle = new PIXI.Graphics();
-circle.beginFill(0xFF0000);
-circle.drawCircle(0,0,radius);
-circle.endFill();
-circle.x = 125;
-circle.y = 50;
-app.stage.addChild(circle);
+      app.stage.addChild(square); // Add the square to the stage
 
-</script>
-</body>
+      // #2 - Create a circle
+      const circle = new PIXI.Graphics();
+      circle.circle(0, 0, 20);
+      circle.fill(0xff0000);
+      circle.x = 125;
+      circle.y = 50;
+
+      app.stage.addChild(circle);
+    </script>
+  </body>
 </html>
 ```
 
@@ -166,40 +159,39 @@ app.stage.addChild(circle);
 
 ### Notes:
 - Here we used the Graphics() object to create 2 shapes. We gave the square above both a stroke (on border of shape) and a fill (the inside of the shape).
-- Graphics docs are here: http://pixijs.download/release/docs/PIXI.Graphics.html
+- Graphics docs are here: https://pixijs.download/release/docs/scene.Graphics.html
 - Note that colors are in JavaScript's hexadecimal number format and always begin in `0x`. Fun fact - in JavaScript you can also create octal numbers - they begin with a zero - here's an example: `parseInt(0111) // 73`
 - Why are the circle and square not at the same "y" on the screen? Because the circles are drawn from the center by default, and the squares are draw from their upper-left corner by default. We can change the square's drawing behavior to match the circle's by changing this line  of code:
 
-	`square.drawRect(0,0,40,40);`
+	`square.rect(0, 0, 40, 40);`
 
 	to this: 
 
-	`square.drawRect(-20,-20,40,40);`
+	`square.rect(-20, -20, 40, 40);`
 
 ## IV. <a id="section4">Two More Shapes
 
 ### Add the following to pixi-intro-2.html
 
 ```javascript
-// #3 make a line
+// #3 - Create a line
 const line = new PIXI.Graphics();
-line.lineStyle(4, 0xFF0000, 1);
 line.moveTo(0, 0);
 line.lineTo(590, 0);
+line.stroke({ width: 4, color: 0xff0000 });
 line.x = 5;
 line.y = 100;
+
 app.stage.addChild(line);
 
-
-// #4 make a shape
+// #4 - Create a polygon
 const poly = new PIXI.Graphics();
-poly.lineStyle(3,0x00FF00,1);
-poly.beginFill(0xFF00FF);
-poly.moveTo(0,0);
+poly.moveTo(0, 0);
 poly.lineTo(-100, 100);
 poly.lineTo(100, 100);
 poly.lineTo(0, 0);
-poly.endFill();
+poly.fill(0xff00ff);
+poly.stroke({ width: 3, color: 0x00ff00, alpha: 1 });
 poly.x = 125;
 poly.y = 125;
 app.stage.addChild(poly);
@@ -218,89 +210,88 @@ We can add DOM buttons to our web page, add event handlers to them, and then cal
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>PixiJS-3</title>
-	<style>
-	button{font-size:1.5em;margin:0.25em;}
-	</style>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-</head>
-<body>
-<div>
-	<button id="move">Move</button>
-	<button id="rotate">Rotate</button>
-</div>
+  <head>
+    <meta charset="utf-8" />
+    <title>PixiJS-3</title>
+    <style>
+      button {
+        font-size: 1.5em;
+        margin: 0.25em;
+      }
+    </style>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <button id="move">Move</button>
+      <button id="rotate">Rotate</button>
+    </div>
+    <script type="module">
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
+      document.body.appendChild(app.canvas);
 
-<script>
-const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-document.body.appendChild(app.view); 
+      // #1 - Create a square
+      // https://pixijs.download/release/docs/scene.Graphics.html
+      const square = new PIXI.Graphics();
+      square.rect(-20, -20, 40, 40); // x, y, width, height
+      square.fill(0xff0000); // red in hex
+      square.x = 25;
+      square.y = 50;
+      square.stroke({ width: 2, color: 0xffff00, alpha: 1 }); // yellow border
 
-// #1 - make a square
-// https://pixijs.download/release/docs/PIXI.Graphics.html
-const square = new PIXI.Graphics();
-square.beginFill(0xFF0000); // red
-square.lineStyle(3,0xFFFF00,1); // lineWidth,color in hex, alpha
-//square.drawRect(0,0,40,40);
-square.drawRect(-20,-20,40,40);
-square.endFill();
-square.x = 25;
-square.y = 50;
-app.stage.addChild(square);
+      app.stage.addChild(square); // Add the square to the stage
 
-// #2 make a circle
-let radius = 20;
-const circle = new PIXI.Graphics();
-circle.beginFill(0xFF0000);
-circle.drawCircle(0,0,radius);
-circle.endFill();
-circle.x = 125;
-circle.y = 50;
-app.stage.addChild(circle);
+      // #2 - Create a circle
+      const circle = new PIXI.Graphics();
+      circle.circle(0, 0, 20);
+      circle.fill(0xff0000);
+      circle.x = 125;
+      circle.y = 50;
 
-// #3 make a line
-const line = new PIXI.Graphics();
-line.lineStyle(4, 0xFF0000, 1);
-line.moveTo(0, 0);
-line.lineTo(590, 0);
-line.x = 5;
-line.y = 100;
-app.stage.addChild(line);
+      app.stage.addChild(circle);
 
+      // #3 - Create a line
+      const line = new PIXI.Graphics();
+      line.moveTo(0, 0);
+      line.lineTo(590, 0);
+      line.stroke({ width: 4, color: 0xff0000 });
+      line.x = 5;
+      line.y = 100;
 
-// #4 make a shape
-const poly = new PIXI.Graphics();
-poly.lineStyle(3,0x00FF00,1);
-poly.beginFill(0xFF00FF);
-poly.moveTo(0,0);
-poly.lineTo(-100, 100);
-poly.lineTo(100, 100);
-poly.lineTo(0, 0);
-poly.endFill();
-poly.x = 125;
-poly.y = 125;
-app.stage.addChild(poly);
+      app.stage.addChild(line);
 
-// #5 target shapes with button DOM events
-document.querySelector("#move").onclick = e=>{square.x+=10;circle.x+=10;line.x+=10;poly.x+=10;};
-document.querySelector("#rotate").onclick = e=>{
-	let amt = Math.PI/6; // 30 degrees
-	square.rotation += amt;
-	line.rotation += amt;
-	poly.rotation += amt;
-	// we can't see the rotation of the circle, so let's scale it up instead
-	circle.width += 5;
-	circle.height += 5;
-};
+      // #4 - Create a polygon
+      const poly = new PIXI.Graphics();
+      poly.moveTo(0, 0);
+      poly.lineTo(-100, 100);
+      poly.lineTo(100, 100);
+      poly.lineTo(0, 0);
+      poly.fill(0xff00ff);
+      poly.stroke({ width: 3, color: 0x00ff00, alpha: 1 });
+      poly.x = 125;
+      poly.y = 125;
+      app.stage.addChild(poly);
 
-</script>
+      // #5 Target shape x positions by adding events to move button
+      document.querySelector("#move").onclick = (e) => {
+        square.x += 10;
+        circle.x += 10;
+        line.x += 10;
+        poly.x += 10;
+      };
 
-</body>
+      // #6 Target shape rotations by adding events to rotate button
+      document.querySelector("#rotate").onclick = (e) => {
+        let amt = Math.PI / 6;
+        square.rotation += amt;
+        line.rotation += amt;
+        poly.rotation += amt;
+        circle.width += 5;
+        circle.height += 5;
+      };
+    </script>
+  </body>
 </html>
 ```
 
@@ -310,7 +301,7 @@ document.querySelector("#rotate").onclick = e=>{
 
 ## VI. <a id="section6">Sprites and Displaying Images & Running code on a server
 
-The Sprite class allows us to display textured images in the jpeg, png, or gif format: http://pixijs.download/release/docs/PIXI.Sprite.html
+The Sprite class allows us to display textured images in the jpeg, png, or gif format: https://pixijs.download/release/docs/scene.Sprite.html
 
 Here is the button image we will use below (right-click to save) --> ![Button image](_images/button-130.png)
 
@@ -339,78 +330,89 @@ Origin 'null' is therefore not allowed access.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>PixiJS-4</title>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>PixiJS-4</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
+      document.body.appendChild(app.canvas);
 
-<script>
-const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-document.body.appendChild(app.view); 
+      // #1 - make some squares
+      const s1 = makeRectangle();
+      s1.x = 100;
+      s1.y = 100;
 
-// #1 - make some squares
-const s1 = makeRectangle();
-s1.x = 100;
-s1.y = 100;
+      const s2 = makeRectangle(80, 40, 0xff00ff);
+      s2.x = 200;
+      s2.y = 100;
 
-const s2 = makeRectangle(80,40,0xFF00FF);
-s2.x = 200;
-s2.y = 100;
+      app.stage.addChild(s1);
+      app.stage.addChild(s2);
 
-app.stage.addChild(s1);
-app.stage.addChild(s2);
+      // #2 - make some PixiJS buttons
+      // https://pixijs.download/release/docs/scene.Sprite.html
+      const texture = await PIXI.Assets.load("images/button-130.png");
+      const b1 = new PIXI.Sprite(texture);
+      b1.buttonMode = true;
+      b1.anchor.set(0.5);
+      b1.x = 100;
+      b1.y = 200;
+      app.stage.addChild(b1);
 
-// #2 - make some PixiJS buttons
-// https://pixijs.download/release/docs/PIXI.Sprite.html
-const b1 = PIXI.Sprite.from('images/button-130.png');
-b1.buttonMode = true;
-b1.anchor.set(0.5);
-b1.x = 100;
-b1.y = 200;
-app.stage.addChild(b1);
+      const b2 = new PIXI.Sprite(texture);
+      b2.buttonMode = true;
+      b2.anchor.set(0.5);
+      b2.x = 250;
+      b2.y = 200;
+      app.stage.addChild(b2);
 
-const b2 = PIXI.Sprite.from('images/button-130.png');
-b2.buttonMode = true;
-b2.anchor.set(0.5);
-b2.x = 250;
-b2.y = 200;
-app.stage.addChild(b2);
+      // #3 add events to the buttons
+      b1.interactive = true;
+      // element.on('event-name',function-to-call);
+      b1.on("pointerup", (e) => {
+        s1.rotation += Math.PI / 12;
+        s2.rotation -= Math.PI / 12;
+      });
 
-// #3 add events to the buttons
-b1.interactive = true;
-// element.on('event-name',function-to-call);
-b1.on('pointerup',e=>{s1.rotation += Math.PI/12;s2.rotation -= Math.PI/12;});
+      b2.interactive = true;
+      b2.on("pointerup", (e) => {
+        s1.height += 20;
+        s1.width += 20;
+        s2.height += 20;
+        s2.width += 10;
+      });
 
-b2.interactive = true;
-b2.on('pointerup',e=>{s1.height += 20;s1.width += 20; s2.height += 20;s2.width += 10; });
+      // #4 make b1 act more like a button (mouseover,mousedown etc)
+      b1.on("pointerover", (e) => {
+        e.target.tint = 0xbbbbbb;
+      });
+      b1.on("pointerdown", (e) => {
+        e.target.tint = 0x888888;
+      });
+      b1.on("pointerup", (e) => {
+        e.target.tint = 0xbbbbbb;
+      });
+      b1.on("pointerout", (e) => {
+        e.currentTarget.tint = 0xffffff;
+      });
+      b1.on("pointerupoutside", (e) => {
+        e.target.tint = 0xffffff;
+      });
 
-// #4 make b1 act more like a button (mouseover,mousedown etc)
-b1.on('pointerover',e=>{e.target.tint=0xBBBBBB});
-b1.on('pointerdown',e=>{e.target.tint=0x888888});
-b1.on('pointerup',e=>{e.target.tint=0xBBBBBB});
-b1.on('pointerout',e=>{e.currentTarget.tint=0xFFFFFF});
-b1.on('pointerupoutside',e=>{e.target.tint=0xFFFFFF});
-
-
-function makeRectangle(width=50,height=50,color=0xFF0000){
-	// https://pixijs.download/release/docs/PIXI.Graphics.html
-	let rect = new PIXI.Graphics();
-	rect.beginFill(color);
-	rect.lineStyle(4, 0xFFFF00, 1);
-	rect.drawRect(-width*.5, -height*.5, width, height);
-	rect.endFill();
-	return rect;
-}
-
-</script>
-</body>
+      function makeRectangle(width = 50, height = 50, color = 0xff0000) {
+        // https://pixijs.download/release/docs/PIXI.Graphics.html
+        let rect = new PIXI.Graphics();
+        rect.rect(-width * 0.5, -height * 0.5, width, height);
+        rect.fill(color);
+        rect.stroke({ width: 4, color: 0xffff00, alpha: 1 });
+        return rect;
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -420,14 +422,14 @@ function makeRectangle(width=50,height=50,color=0xFF0000){
 
 ### Notes:
 
-- Sprite docs are here: http://pixijs.download/release/docs/PIXI.Sprite.html
+- Sprite docs are here: https://pixijs.download/release/docs/scene.Sprite.html
 - here we are using PixiJS sprites as buttons, rather than using DOM buttons like we did last time. 
 - note than the PixiJS `on` method is similar to `addEventListener()` in the DOM.
 - the `pointerover` and similar events will work with both mouse events and touch events.
 - note our handy helper function `makeRectangle()`
 
 ## VII. <a id="section7">Using the Demos
-Head to this demo page - http://pixijs.github.io/examples/#/basics/basic.js - which was linked above.
+Head to this demo page - https://pixijs.com/8.x/examples - which was linked above.
 
 These demos are really helpful in that they nicely illustrate many of the features of PixiJS, and that you can also edit the code in place and see "live" changes.
 
