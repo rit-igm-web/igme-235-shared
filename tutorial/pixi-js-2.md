@@ -166,33 +166,32 @@ We do still need to say ```this.moving=false;``` because we aren't passing in a 
 #### classes.js
 
 ```js
-class Circle extends PIXI.Graphics{
-	constructor(radius=20, color=0xFF0000, x=0, y=0){
-		super();
-		this.radius = radius;
-		this.x = x;
-		this.y = y;
-		this.beginFill(color);
-		this.drawCircle(0,0,radius);
-		this.endFill();
-		
-		// other variables
-		this.dx = Math.random() * 10 - 5;
-		this.dy = Math.random() * 10 - 5;
-	}
-	
-	move(){
-		this.x += this.dx;
-		this.y += this.dy;
-	}
-	
-	reflectX(){
-		this.dx *= -1;
-	}
-	
-	reflectY(){
-		this.dy *= -1;
-	}
+class Circle extends PIXI.Graphics {
+  constructor(radius = 20, color = 0xff0000, x = 0, y = 0) {
+    super();
+    this.radius = radius;
+    this.circle(0, 0, radius);
+    this.x = x;
+    this.y = y;
+    this.fill(color);
+
+    // other variables
+    this.dx = Math.random() * 10 - 5;
+    this.dy = Math.random() * 10 - 5;
+  }
+
+  move() {
+    this.x += this.dx;
+    this.y += this.dy;
+  }
+
+  reflectX() {
+    this.dx *= -1;
+  }
+
+  reflectY() {
+    this.dy *= -1;
+  }
 }
 ```
 
@@ -204,33 +203,29 @@ We are also going to need a main HTML file to test our new class - go ahead and 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Pixi Animation 3</title>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-	<script src="js/classes.js"></script>
-</head>
-<body>
-<script>
-const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-document.body.appendChild(app.view); 
+  <head>
+    <meta charset="utf-8" />
+    <title>Pixi Animation 3</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+    <script src="js/classes.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
 
-let c1 = new Circle()
-c1.x = 100;
-c1.y = 100;
+      document.body.appendChild(app.canvas);
 
-let c2 = new Circle(50,0xFF00FF,200,200)
+      let c1 = new Circle();
+      c1.x = 100;
+      c1.y = 100;
 
-app.stage.addChild(c1);
-app.stage.addChild(c2);
+      let c2 = new Circle(50, 0xff00ff, 200, 200);
 
-</script>
-</body>
+      app.stage.addChild(c1);
+      app.stage.addChild(c2);
+    </script>
+  </body>
 </html>
 ```
 
@@ -241,10 +236,9 @@ app.stage.addChild(c2);
 
 **Because Circle extends PIXI.Graphics, it has all of the properties and methods inherited from these super classes:**
 
-- [PIXI.Graphics](https://pixijs.download/release/docs/PIXI.Graphics.html)
-- [PIXI.Container](https://pixijs.download/release/docs/PIXI.Container.html)
-- [PIXI.DisplayObject](https://pixijs.download/release/docs/PIXI.DisplayObject.html)
-- [PIXI.utils.EventEmitter](https://github.com/primus/eventemitter3)
+- [PIXI.Graphics](https://pixijs.download/release/docs/scene.Graphics.html)
+- [PIXI.Container](https://pixijs.download/release/docs/scene.Container.html)
+- [PIXI.utils.EventEmitter](https://pixijs.download/release/docs/utils.EventEmitter.html)
 
 ### V. <a id="section5">Animation 
 Now we need to add  more of these `Circle` objects to the screen and animate them. The code below will get us started:
@@ -255,56 +249,49 @@ Now we need to add  more of these `Circle` objects to the screen and animate the
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Pixi Animation 4</title>
-	<script src="https://pixijs.download/release/pixi.min.js"></script>
-    	<script src="js/classes.js"></script>
-</head>
-<body>
-<script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pixi Animation 4</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+    <script src="js/classes.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      const app = new PIXI.Application();
+      await app.init({ width: 640, height: 360 });
 
-// #1 - Script scoped variables
- const app = new PIXI.Application(
-    {
-	width: 600,
-	height: 400
-    }
-);
-document.body.appendChild(app.view);
+      document.body.appendChild(app.canvas);
 
-const screenWidth = app.view.width;
-const screenHeight = app.view.height;
-const circles = [];
+      const screenWidth = app.renderer.width;
+      const screenHeight = app.renderer.height;
+      const circles = [];
 
-// #3 - get this app started!
-createCircles();
+      // #3 - get this app started!
+      createCircles();
 
-// #2 - make some circles
-function createCircles(){
-	// red circles
-	for(let i=0;i<5;i++){
-		let c = new Circle()
-		c.x = Math.random() * (screenWidth - 100) + 50;
-		c.y = Math.random() * (screenHeight - 100) + 50;
-		circles.push(c);
-		app.stage.addChild(c);
-	}
-	
-	// yellow circles
-	for(let i=0;i<10;i++){	
-		let c = new Circle(10,0xFFFF00);
-		c.x = Math.random() * (screenWidth - 100) + 50;
-		c.y = Math.random() * (screenHeight - 100) + 50;
-		app.stage.addChild(c);
-		circles.push(c);
-	}
-}
+      // #2 - make some circles
+      function createCircles() {
+        // red circles
+        for (let i = 0; i < 5; i++) {
+          let c = new Circle();
+          c.x = Math.random() * (screenWidth - 100) + 50;
+          c.y = Math.random() * (screenHeight - 100) + 50;
+          circles.push(c);
+          app.stage.addChild(c);
+        }
 
-</script>
-</body>
+        // yellow circles
+        for (let i = 0; i < 10; i++) {
+          let c = new Circle(10, 0xffff00);
+          c.x = Math.random() * (screenWidth - 100) + 50;
+          c.y = Math.random() * (screenHeight - 100) + 50;
+          app.stage.addChild(c);
+          circles.push(c);
+        }
+      }
+    </script>
+  </body>
 </html>
-
 ```
 
 #### Which looks like this:
@@ -341,11 +328,11 @@ app.ticker.add(()=>
 **Now your circles should be moving and bouncing off of the walls!**
 
 #### Notes:
-- [`app.ticker`](https://pixijs.download/release/docs/PIXI.Ticker_.html) is a wrapper for [`window.requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) which you may have already seen in the optional [Life HW](./HW-life.md) - it is usually called at 60 FPS.
+- [`app.ticker`](https://pixijs.download/release/docs/ticker.Ticker.html) is a wrapper for [`window.requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) which you may have already seen in the optional [Life HW](./HW-life.md) - it is usually called at 60 FPS.
 
 ### VI. <a id="section6">Nota Bene
-- The class hierarchy for **PIXI.Graphics** is [PIXI.Graphics](https://pixijs.download/release/docs/PIXI.Graphics.html) > [PIXI.Container](https://pixijs.download/release/docs/PIXI.Container.html) > [PIXI.DisplayObject](https://pixijs.download/release/docs/PIXI.DisplayObject.html) >[PIXI.utils.EventEmitter](https://github.com/primus/eventemitter3)
-- The class hierarchy for **PIXI.Sprite** is [PIXI.Sprite](https://pixijs.download/release/docs/PIXI.Sprite.html) > [PIXI.Container](https://pixijs.download/release/docs/PIXI.Container.html) > [PIXI.DisplayObject](https://pixijs.download/release/docs/PIXI.DisplayObject.html) > [PIXI.utils.EventEmitter](https://github.com/primus/eventemitter3)
+- The class hierarchy for **PIXI.Graphics** is [PIXI.Graphics](https://pixijs.download/release/docs/scene.Graphics.html) > [PIXI.Container](https://pixijs.download/release/docs/scene.Container.html) >[PIXI.utils.EventEmitter](https://pixijs.download/release/docs/utils.EventEmitter.html)
+- The class hierarchy for **PIXI.Sprite** is [PIXI.Sprite](https://pixijs.download/release/docs/scene.Sprite.html) > [PIXI.Container](https://pixijs.download/release/docs/scene.Container.html) > [PIXI.utils.EventEmitter](https://pixijs.download/release/docs/utils.EventEmitter.html)
 
 ### VII. <a id="section7">Review Questions
 Nothing for now.
