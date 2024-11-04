@@ -1,7 +1,9 @@
 # HW - Circle Blast! - Part 1
 
 ## Contents
+
 <!--- Local Navigation --->
+
 I. [Overview](#section1)
 
 II. [Get started!](#section2)
@@ -23,7 +25,8 @@ IX. [Pre-loading the audio files](#section9)
 <hr><hr>
 
 ## I. <a id="section1">Overview
-In this walkthrough we will construct a complete PixiJS game, *Circle Blast!*
+
+In this walkthrough we will construct a complete PixiJS game, _Circle Blast!_
 
 **Parts I-III** have the following features:
 
@@ -38,29 +41,35 @@ In this walkthrough we will construct a complete PixiJS game, *Circle Blast!*
 - Scoring and levels
 
 **Part IV** (optional) adds the following:
+
 - Custom font loading using [Web Font Loader](https://github.com/typekit/webfontloader)
 - "Smarter" circles
 - The [Subclass Sandbox](http://gameprogrammingpatterns.com/subclass-sandbox.html) design pattern
 
 ### Prerequisite knowledge
+
 Before doing this exercise, you should have completed the entire [web app series](./web-apps-0.md), as well as [pixi-js-1.md](./pixi-js-1.md) and [pixi-js-2.md](./pixi-js-2.md)
 
 ### Screen shots
 
 #### Start Screen
+
 ![Screenshot](_images/circle-blast-1.jpg)
 
 #### Main Game Screen
+
 ![Screenshot](_images/circle-blast-2.jpg)
 
 #### Game Over Screen
+
 ![Screenshot](_images/circle-blast-3.jpg)
 
 ## II. <a id="section2">Get started!
 
-The start code is zipped up here: [HW-pixi-game-start.zip](_files/HW-pixi-game-start.zip) (click through before downloading)
+The start code is zipped up here: [HW-pixi-game-start.zip](\_files/HW-pixi-game-start.zip) (click through before downloading)
 
 Take a look at what you have:
+
 - a **game.html** file - currently it's mostly done for you, except that you are going to have to link to 2 JS libraries, and to 3 other JavaScript files. There will be no custom CSS in this project, other than what's already here for the custom "move" cursor.
 - an **images** directory - contains our custom cursor, a graphic for the player's ship, and a sprite sheet that is used with the explosion effect.
 - a **js** directory - there are 3 JavaScript files in here - **classes.js** and **main.js** are both currently empty, but **utilities.js** is all done for you.
@@ -71,17 +80,17 @@ Take a look at what you have:
 
 - First let's get the **game.html** file completed - it needs to look like this:
 
-![Screenshot](_images/circle-blast-4-pixi6.5.8.png)
+![Screenshot](_images/circle-blast-4.png)
 
-- If you don't want to type in the URLs for the 2 libraries, then google "CDN Pixi" and "CDN Howler" to find and copy/paste the URLs yourself.  **For now, we still recommend that you, stick to Pixi Version 6.  Pixi Version 7 is new last semester and may not match up perfectly with some of our materials.**
+- If you don't want to type in the URLs for the 2 libraries, then google "CDN Pixi" and "CDN Howler" to find and copy/paste the URLs yourself. **For now, we still recommend that you, stick to Pixi Version 6. Pixi Version 7 is new last semester and may not match up perfectly with some of our materials.**
 
 ### Is everything imported?
 
 Load the **game.html** page into a browser. To verify that you imported these libraries, type `PIXI`, `Howl`, and `getRandomUnitVector()` into the browser console. You should similar results to below, which means that you are all done making changes to this file:
 
-![Screenshot](_images/circle-blast-5.jpg)
+![Screenshot](_images/circle-blast-5.png)
 
-##  IV. <a id="section4">Getting started on main.js
+## IV. <a id="section4">Getting started on main.js
 
 **main.js** will contain the majority of our game code, and will be responsible for setting up our 3 "scenes" and their UI, loading images and sounds, and determining when the game is over.
 
@@ -167,21 +176,20 @@ function setup() {
 - We have set up all of our "script scope" variables that we will need for the completed game.
 - Note that we are starting the game - by calling `setup()` - AFTER we have pre-loaded all of our image assets.
 
+- **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen). The messages in the console won't appear when using PIXI v7, but you can examine the value of PIXI.VERSION in the console if you wish:**
 
-- **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen).  The messages in the console won't appear when using PIXI v7, but you can examine the value of PIXI.VERSION in the console if you wish:**
+![Screenshot](_images/circle-blast-6.png)
 
-![Screenshot](_images/circle-blast-6-pixi6.jpg)
+- **You can verify the images loaded by looking under the _Network_ tab:**
 
-- **You can verify the images loaded by looking under the *Network* tab:**
+![Screenshot](_images/circle-blast-7.png)
 
-![Screenshot](_images/circle-blast-7.jpg)
-
-##  V. <a id="section5">Getting started on the 3 scenes
+## V. <a id="section5">Getting started on the 3 scenes
 
 - The are 3 scenes we need to code: "start scene", "game scene" and "game over scene"
 - Add the following code to `setUp(){...}`:
 
-![Screenshot](_images/circle-blast-8.jpg)
+![Screenshot](_images/circle-blast-8.png)
 
 If you try to preview the results you will get an error because we didn't write `createLabelsAndButtons()` yet.
 
@@ -191,22 +199,22 @@ If you try to preview the results you will get an error because we didn't write 
 
 **Note: We are using the Futura font below, which might not be on your machine. If it's not, just use Verdana or similar. In Part IV, you are going to change the text over to a downloaded web font anyway.**
 
-![Screenshot](_images/circle-blast-9.jpg)
+![Screenshot](_images/circle-blast-9.png)
 
-- There is a lot of interface creation code here - but hopefully it is fairly clear what's going on. 
-- In the game you might create for project 3, you will probably want to create most of this kind of text in an image editing/creation program like Photoshop, and then load in the images you created. It will look better and require less code than the approach we used here. 
+- There is a lot of interface creation code here - but hopefully it is fairly clear what's going on.
+- In the game you might create for project 3, you will probably want to create most of this kind of text in an image editing/creation program like Photoshop, and then load in the images you created. It will look better and require less code than the approach we used here.
 - **Open the game up in the web browser and it should look like this:**
-- *Note: your start button won't show up if an error is encountered before it's added to the scene.  Check the console.  See an error?  We haven't yet written the `startGame()` function.  You can temporarily comment out the line that refers to it to preview your button before moving on.*
+- _Note: your start button won't show up if an error is encountered before it's added to the scene. Check the console. See an error? We haven't yet written the `startGame()` function. You can temporarily comment out the line that refers to it to preview your button before moving on._
 
 ![Screenshot](_images/circle-blast-1.jpg)
 
-- You are now done coding the "start scene", so let's move on to the "game scene" (also, uncomment the line mentioned above if you haven't already). 
+- You are now done coding the "start scene", so let's move on to the "game scene" (also, uncomment the line mentioned above if you haven't already).
 
 ## VII. <a id="section7">Begin coding the Game Scene
 
 - To get the "start game" button working, implement `startGame()` - this goes in **main.js**:
 
-![Screenshot](_images/circle-blast-10.jpg)
+![Screenshot](_images/circle-blast-10.png)
 
 - Test it. Clicking the button should show the game scene and hide the start scene. The game scene is currently empty, so all you will see is the black 600x600 &lt;canvas>.
 
@@ -214,18 +222,19 @@ If you try to preview the results you will get an error because we didn't write 
 
 - **Now get started on building the game scene user interface - add the following to the end of `createLabelsAndButtons()`:**
 
-![Screenshot](_images/circle-blast-11.jpg)
+![Screenshot](_images/circle-blast-11.png)
 
 - **Note that `scoreLabel` and `lifeLabel` have been previously declared above in "script scope" so that we could refer to them later**
 - **You will also need to declare the following 2 functions. These will be called periodically as the player shoots the circles, and as the ship takes damage:**
 
-![Screenshot](_images/circle-blast-12.jpg)
+![Screenshot](_images/circle-blast-12.png)
 
 - **Reload the page, and click the "start game" button, you should now see the score and health labels:**
 
-![Screenshot](_images/circle-blast-13.jpg)
+![Screenshot](_images/circle-blast-13.png)
 
 ### Coding the "Game Over" scene
+
 - **Let's write the code for the "game over" scene - add this to the end of `createLabelsAndButtons()`. Here's all the code you need - for your copy & paste pleasure:**
 
 ```javascript
@@ -253,17 +262,18 @@ playAgainButton.on("pointerout", (e) => (e.currentTarget.alpha = 1.0)); // ditto
 gameOverScene.addChild(playAgainButton);
 ```
 
-- **Reload the page to be sure that there are no code errors.  Nothing will look different at this point.**
+- **Reload the page to be sure that there are no code errors. Nothing will look different at this point.**
 - You are all done with `createLabelsAndButtons()` - that's a good thing!
 
 ## VIII. <a id="section8">Getting the ship on the screen
+
 Now we need to create a spaceship that the player can control. We will first create an ES6 class to encapsulate all of the ship state and behavior.
 
 ### Creating the Ship class
 
 - Add the following to **classes.js**:
 
-![Screenshot](_images/circle-blast-14-pixi5.jpg)
+![Screenshot](_images/circle-blast-14.png)
 
 ### Create the ship instance
 
@@ -279,6 +289,7 @@ gameScene.addChild(ship);
 - Only a quarter of the ship is visible because we adjusted the `.anchor` so it would be drawn from its center rather than the upper-left corner, which is the default.
 
 ## IX. <a id="section9">Pre-loading the audio files
+
 In this game we are using the [Howler](https://github.com/goldfire/howler.js/) audio library, which uses the high-performance Web Audio API to play audio files.
 (Recall that you imported this library at the top of the **game.html** file).
 
@@ -301,11 +312,11 @@ fireballSound = new Howl({
 
 - **You can test that this code successfully loaded the audio files by typing the following into the console (which should cause the sound to play):**
 
-`shootSound.play()` 
+`shootSound.play()`
 
-`hitSound.play()` 
+`hitSound.play()`
 
-`fireballSound.play()` 
+`fireballSound.play()`
 
 <hr><hr>
 
