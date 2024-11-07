@@ -187,7 +187,7 @@ function setup() {
 ## V. <a id="section5">Getting started on the 3 scenes
 
 - The are 3 scenes we need to code: "start scene", "game scene" and "game over scene"
-- Add the following code to `setUp(){...}`:
+- Add the following code to `setup(){...}`:
 
 ![Screenshot](_images/circle-blast-8.png)
 
