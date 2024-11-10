@@ -80,7 +80,7 @@ Take a look at what you have:
 
 - First let's get the **game.html** file completed - it needs to look like this:
 
-![Screenshot](_images/circle-blast-4.png)
+![Screenshot](_images/circle-blast-4.jpg)
 
 - If you don't want to type in the URLs for the 2 libraries, then google "CDN Pixi" and "CDN Howler" to find and copy/paste the URLs yourself.
 
@@ -88,7 +88,7 @@ Take a look at what you have:
 
 Load the **game.html** page into a browser. To verify that you imported these libraries, type `PIXI`, `Howl`, and `getRandomUnitVector()` into the browser console. You should similar results to below, which means that you are all done making changes to this file:
 
-![Screenshot](_images/circle-blast-5.png)
+![Screenshot](_images/circle-blast-5.jpg)
 
 ## IV. <a id="section4">Getting started on main.js
 
@@ -133,9 +133,9 @@ loadImages();
 async function loadImages() {
   // https://pixijs.com/8.x/guides/components/assets#loading-multiple-assets
   PIXI.Assets.addBundle("sprites", {
-    spaceship: "images/spaceship.png",
-    explosions: "images/explosions.png",
-    move: "images/move.png",
+    spaceship: "images/spaceship.jpg",
+    explosions: "images/explosions.jpg",
+    move: "images/move.jpg",
   });
 
   // The second argument is a callback function that is called whenever the loader makes progress.
@@ -184,18 +184,18 @@ async function setup() {
 
 - **Load the game in a browser to verify that PIXI is loaded (you should see a 600x600 black screen). The messages in the console won't appear when using PIXI v7+, but you can examine the value of PIXI.VERSION in the console if you wish:**
 
-![Screenshot](_images/circle-blast-6.png)
+![Screenshot](_images/circle-blast-6.jpg)
 
 - **You can verify the images loaded by looking under the _Network_ tab:**
 
-![Screenshot](_images/circle-blast-7.png)
+![Screenshot](_images/circle-blast-7.jpg)
 
 ## V. <a id="section5">Getting started on the 3 scenes
 
 - The are 3 scenes we need to code: "start scene", "game scene" and "game over scene"
 - Add the following code to `setup(){...}`:
 
-![Screenshot](_images/circle-blast-8.png)
+![Screenshot](_images/circle-blast-8.jpg)
 
 If you try to preview the results you will get an error because we didn't write `createLabelsAndButtons()` yet.
 
@@ -205,7 +205,7 @@ If you try to preview the results you will get an error because we didn't write 
 
 **Note: We are using the Futura font below, which might not be on your machine. If it's not, just use Verdana or similar. In Part IV, you are going to change the text over to a downloaded web font anyway.**
 
-![Screenshot](_images/circle-blast-9.png)
+![Screenshot](_images/circle-blast-9.jpg)
 
 - There is a lot of interface creation code here - but hopefully it is fairly clear what's going on.
 - In the game you might create for project 3, you will probably want to create most of this kind of text in an image editing/creation program like Photoshop, and then load in the images you created. It will look better and require less code than the approach we used here.
@@ -220,7 +220,7 @@ If you try to preview the results you will get an error because we didn't write 
 
 - To get the "start game" button working, implement `startGame()` - this goes in **main.js**:
 
-![Screenshot](_images/circle-blast-10.png)
+![Screenshot](_images/circle-blast-10.jpg)
 
 - Test it. Clicking the button should show the game scene and hide the start scene. The game scene is currently empty, so all you will see is the black 600x600 &lt;canvas>.
 
@@ -228,16 +228,16 @@ If you try to preview the results you will get an error because we didn't write 
 
 - **Now get started on building the game scene user interface - add the following to the end of `createLabelsAndButtons()`:**
 
-![Screenshot](_images/circle-blast-11.png)
+![Screenshot](_images/circle-blast-11.jpg)
 
 - **Note that `scoreLabel` and `lifeLabel` have been previously declared above in "script scope" so that we could refer to them later**
 - **You will also need to declare the following 2 functions. These will be called periodically as the player shoots the circles, and as the ship takes damage:**
 
-![Screenshot](_images/circle-blast-12.png)
+![Screenshot](_images/circle-blast-12.jpg)
 
 - **Reload the page, and click the "start game" button, you should now see the score and health labels:**
 
-![Screenshot](_images/circle-blast-13.png)
+![Screenshot](_images/circle-blast-13.jpg)
 
 ### Coding the "Game Over" scene
 
@@ -280,7 +280,7 @@ Now we need to create a spaceship that the player can control. We will first cre
 
 - Add the following to **classes.js**:
 
-![Screenshot](_images/circle-blast-14.png)
+![Screenshot](_images/circle-blast-14.jpg)
 
 ### Create the ship instance
 
