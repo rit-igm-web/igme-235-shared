@@ -101,12 +101,12 @@ Load the **game.html** page into a browser. To verify that you imported these li
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 "use strict";
 const app = new PIXI.Application();
-await app.init({ width: 600, height: 600 });
 
-document.body.appendChild(app.canvas);
+// aliases
+let stage;
+let assets;
 
-const screenWidth = app.renderer.width;
-const screenHeight = app.renderer.height;
+let sceneWidth, sceneHeight;
 
 // aliases
 let stage;
@@ -146,8 +146,14 @@ async function loadImages() {
   setup();
 }
 
-function setup() {
+async function setup() {
+  await app.init({ width: 600, height: 600 });
+
+  document.body.appendChild(app.canvas);
+
   stage = app.stage;
+  sceneWidth = app.renderer.width;
+  sceneHeight = app.renderer.height;
 
   // #1 - Create the `start` scene
 
@@ -238,6 +244,7 @@ If you try to preview the results you will get an error because we didn't write 
 - **Let's write the code for the "game over" scene - add this to the end of `createLabelsAndButtons()`. Here's all the code you need - for your copy & paste pleasure:**
 
 ```javascript
+// 3 - set up `gameOverScene`
 // 3A - make game over text
 let gameOverText = new PIXI.Text("Game Over!\n        :-O", {
   fill: 0xffffff,
@@ -246,14 +253,14 @@ let gameOverText = new PIXI.Text("Game Over!\n        :-O", {
   stroke: 0xff0000,
   strokeThickness: 6,
 });
-gameOverText.x = screenWidth / 2 - gameOverText.width / 2;
-gameOverText.y = screenHeight / 2 - 160;
+gameOverText.x = sceneWidth / 2 - gameOverText.width / 2;
+gameOverText.y = sceneHeight / 2 - 160;
 gameOverScene.addChild(gameOverText);
 
 // 3B - make "play again?" button
 let playAgainButton = new PIXI.Text("Play Again?", buttonStyle);
-playAgainButton.x = screenWidth / 2 - playAgainButton.width / 2;
-playAgainButton.y = screenHeight - 100;
+playAgainButton.x = sceneWidth / 2 - playAgainButton.width / 2;
+playAgainButton.y = sceneHeight - 100;
 playAgainButton.interactive = true;
 playAgainButton.buttonMode = true;
 playAgainButton.on("pointerup", startGame); // startGame is a function reference
