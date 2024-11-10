@@ -281,7 +281,7 @@ Now we need to create a spaceship that the player can control. We will first cre
 
 ```javascript
 // #5 - Create ship
-ship = new Ship(assets);
+ship = new Ship(assets.spaceship);
 gameScene.addChild(ship);
 ```
 
