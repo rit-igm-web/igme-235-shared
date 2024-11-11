@@ -261,12 +261,12 @@ class SeekingCircle extends Circle {
 
 ```javascript
 _chase(dt){
-	let t = this.target;
-	let amt = 3.0 * dt;
-	let newX = cosineInterpolate(this.x, t.x, amt);
-	let newY = cosineInterpolate(this.y, t.y, amt);
-	this.x = newX;
-	this.y = newY;
+  let t = this.target;
+  let amt = 3.0 * dt;
+  let newX = cosineInterpolate(this.x, t.x, amt);
+  let newY = cosineInterpolate(this.y, t.y, amt);
+  this.x = newX;
+  this.y = newY;
 }
 ```
 
