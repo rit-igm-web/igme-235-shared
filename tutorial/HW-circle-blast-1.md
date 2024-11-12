@@ -102,10 +102,6 @@ Load the **game.html** page into a browser. To verify that you imported these li
 "use strict";
 const app = new PIXI.Application();
 
-// aliases
-let stage;
-let assets;
-
 let sceneWidth, sceneHeight;
 
 // aliases
