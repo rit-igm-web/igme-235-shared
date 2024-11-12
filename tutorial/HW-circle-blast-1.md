@@ -129,9 +129,9 @@ loadImages();
 async function loadImages() {
   // https://pixijs.com/8.x/guides/components/assets#loading-multiple-assets
   PIXI.Assets.addBundle("sprites", {
-    spaceship: "images/spaceship.jpg",
-    explosions: "images/explosions.jpg",
-    move: "images/move.jpg",
+    spaceship: "images/spaceship.png",
+    explosions: "images/explosions.png",
+    move: "images/move.png",
   });
 
   // The second argument is a callback function that is called whenever the loader makes progress.
