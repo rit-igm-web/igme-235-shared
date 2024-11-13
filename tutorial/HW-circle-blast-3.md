@@ -48,10 +48,14 @@ You are now done adding code to **classes.js**!
 
 ### II-C. Fire bullets when the player clicks the mouse
 
-We will hook up the code that listens for clicks in `startGame()` - here it is:
+We will hook up the code that listens for clicks in `startGame()` - all you have to do is uncomment it!
 
 ```javascript
-app.view.onclick = fireBullet; // start taking clicks
+...
+gameScene.visible = true;
+// app.view.onclick = fireBullet; // <-- uncomment this line
+levelNum = 1;
+...
 ```
 
 - **Reload the page, and start the game. Clicking should cause bullets to be fired from the current position of the ship - but of course they don't move yet.**
