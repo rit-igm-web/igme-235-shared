@@ -93,7 +93,7 @@ Note that if `dt` is greater than 1/12 of a second we will clamp it to 1/12 of a
 
 ```javascript
 // #2 - Move Ship
-let mousePosition = app.renderer.plugins.interaction.mouse.global;
+let mousePosition = app.renderer.events.pointer.global;
 ship.position = mousePosition;
 ```
 
