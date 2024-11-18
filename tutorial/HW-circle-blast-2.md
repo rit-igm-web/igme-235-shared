@@ -142,7 +142,7 @@ This code is hopefully self-explanatory: it creates circles, adds them to the ar
 
 ### IV-A. In **main.js** implement `loadLevel()`:
 
-```
+```js
 function loadLevel(){
   createCircles(levelNum * 5);
 }
@@ -197,7 +197,7 @@ Recall that `array.filter()` accepts a "testing" (or predicate) function that re
 
 ### VI-A. Add the following to `gameLoop()`
 
-```
+```js
 // #7 - Is game over?
 if (life <= 0){
   end();
