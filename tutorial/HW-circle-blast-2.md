@@ -33,7 +33,7 @@ We are going to skip past "#7 - load sprite sheet" for now and instead handle "#
 
 Here's the stub for `gameLoop()`, in copy/paste form. Add this to the bottom of **main.js**:
 
-```
+```js
 function gameLoop(){
   // if (paused) return; // keep this commented out for now
 
