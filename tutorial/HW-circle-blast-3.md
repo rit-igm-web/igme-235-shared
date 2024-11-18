@@ -58,13 +58,13 @@ levelNum = 1;
 ...
 ```
 
-We should also add a line to `end()` that removes the event listener at the end of the game.
+We should also removes the event listener, just uncomment this line in the `end()` function.
 ```js
 ...
 explosions.forEach((e) => gameScene.removeChild(e));
 explosions = [];
 
-// app.view.onclick = null; // disable the onclick event // <--add this line
+// app.view.onclick = null; // disable the onclick event // <--uncomment this line
 
 gameOverScene.visible = true;
 gameScene.visible = false;
