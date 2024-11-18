@@ -33,7 +33,7 @@ We are going to skip past "#7 - load sprite sheet" for now and instead handle "#
 
 Here's the stub for `gameLoop()`, in copy/paste form. Add this to the bottom of **main.js**:
 
-```
+```js
 function gameLoop(){
   // if (paused) return; // keep this commented out for now
 
@@ -142,7 +142,7 @@ This code is hopefully self-explanatory: it creates circles, adds them to the ar
 
 ### IV-A. In **main.js** implement `loadLevel()`:
 
-```
+```js
 function loadLevel(){
   createCircles(levelNum * 5);
 }
@@ -197,7 +197,7 @@ Recall that `array.filter()` accepts a "testing" (or predicate) function that re
 
 ### VI-A. Add the following to `gameLoop()`
 
-```
+```js
 // #7 - Is game over?
 if (life <= 0){
   end();

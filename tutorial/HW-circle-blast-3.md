@@ -58,6 +58,19 @@ levelNum = 1;
 ...
 ```
 
+We should also add a line to `end()` that removes the event listener at the end of the game.
+```js
+...
+explosions.forEach((e) => gameScene.removeChild(e));
+explosions = [];
+
+// app.view.onclick = null; // disable the onclick event // <--add this line
+
+gameOverScene.visible = true;
+gameScene.visible = false;
+...
+```
+
 - **Reload the page, and start the game. Clicking should cause bullets to be fired from the current position of the ship - but of course they don't move yet.**
 
 Note that clicking the "Enter, ... if you dare!" button triggers a bullet firing. This is either a _bug_ or a _feature_ depending on your perpective, because some of the early arcade cabinets did the same thing. When you are done with this exercise, fix this behavior if you want to. (This will also happen when you enter the "Game Scene" from the "Game Over" Scene.)
