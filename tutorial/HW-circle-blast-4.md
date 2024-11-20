@@ -97,7 +97,7 @@ WebFont.load({
 });
 ```
 
-- **And comment out the `loadImages` block of code near the top of main.js:**
+- **And comment out the call to `loadImages` near the top of main.js:**
 
 ```javascript
 // loadImages()
