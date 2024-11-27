@@ -6,7 +6,7 @@ _Using PixiJS and/or the Browser DOM, create an Interactive Game or Rich Media "
 
 - For this project you are creating a JavaScript-driven game or experience.
 - You will be proposing an idea and describing it on a nicely formatted "proposal/about" web page which will include the "game treatment" elements described below:
-- If you would like to see examples of previous projects, take a look back at the [Past Project exploration Exercise from Week 1](https://github.com/dccircuit/IGME-235-Spring-2023/blob/master/exercises/projects.md).
+- If you would like to see examples of previous projects, take a look back at the [Past Project exploration Exercise from Week 1](../exercises/projects.md).
 
 You will use **ONE** (or both) of these technology stacks:
 
@@ -84,9 +84,9 @@ You will use **ONE** (or both) of these technology stacks:
 - Proposal: Post a simple "proposal/about" web page in your banjo account (under project3/about.html would be a good place) that provides the information described in the next section about what you plan to create for your game. - see myCourses dropbox for submission info & the due date
 - Checkpoint: Create a working draft of the project. Post it to you Crit Group channel in our Slack workspace - see myCourses dropbox for the due date
 - Final project deliverable is due final exam week - see MyCourses dropbox for the due date and submission instructions. Be sure to post the project to the web, and put the link in the comments field of the myCourses dropbox.
-  - Part of the final deliverable includes a demonstration of your game.  
-     1. You should create a short video demo by recording your computer screen while using a tool such as OBS. http://obsproject.com
-    Submit this video by uploading it to YouTube as an unlisted video. Ideally, you should explain your project with a voice-over, however if you do not wish to do that, you can upload your description as a separate file to the dropbox. 1. If you have technical issues that prevent you from doing this, you may schedule a Zoom chat with your course instructor to demonstrate your finished project (which they may then record to be able to refer to during grading).
+  - Part of the final deliverable includes a demonstration of your game.
+    1.  You should create a short video demo by recording your computer screen while using a tool such as OBS. http://obsproject.com
+        Submit this video by uploading it to YouTube as an unlisted video. Ideally, you should explain your project with a voice-over, however if you do not wish to do that, you can upload your description as a separate file to the dropbox. 1. If you have technical issues that prevent you from doing this, you may schedule a Zoom chat with your course instructor to demonstrate your finished project (which they may then record to be able to refer to during grading).
 
 ## V. Proposal
 
