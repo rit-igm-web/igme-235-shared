@@ -24,7 +24,7 @@ IX. [Pre-loading the audio files](#section9)
 
 <hr><hr>
 
-## I. <a id="section1">Overview
+## <div id="section1">I. Overview</div>
 
 In this walkthrough we will construct a complete PixiJS game, _Circle Blast!_
 
@@ -64,9 +64,9 @@ Before doing this exercise, you should have completed the entire [web app series
 
 ![Screenshot](_images/circle-blast-3.jpg)
 
-## II. <a id="section2">Get started!
+## <div id="section2">II. Get started!</div>
 
-The start code is zipped up here: [HW-pixi-game-start.zip](\_files/HW-pixi-game-start.zip) (click through before downloading)
+The start code is zipped up here: [HW-pixi-game-start.zip](_files/HW-pixi-game-start.zip) (click through before downloading)
 
 Take a look at what you have:
 
@@ -76,7 +76,7 @@ Take a look at what you have:
 
 **Reminder: Once we start loading in images utilizing JavaScript, you will run into CORS security issues, and will need to run this project off of a server. See the list of 4 ways to do this on the [Intro to PixiJS](pixi-js-1.md) notes.**
 
-## III. <a id="section3">Coding game.html
+## <div id="section3">III. Coding game.html</div>
 
 - First let's get the **game.html** file completed - it needs to look like this:
 
@@ -90,7 +90,7 @@ Load the **game.html** page into a browser. To verify that you imported these li
 
 ![Screenshot](_images/circle-blast-5.jpg)
 
-## IV. <a id="section4">Getting started on main.js
+## <div id="section4">IV. Getting started on main.js</div>
 
 **main.js** will contain the majority of our game code, and will be responsible for setting up our 3 "scenes" and their UI, loading images and sounds, and determining when the game is over.
 
@@ -186,7 +186,7 @@ async function setup() {
 
 ![Screenshot](_images/circle-blast-7.jpg)
 
-## V. <a id="section5">Getting started on the 3 scenes
+## V. <div id="section5">Getting started on the 3 scenes</div>
 
 - The are 3 scenes we need to code: "start scene", "game scene" and "game over scene"
 - Add the following code to `setup(){...}`:
@@ -195,7 +195,7 @@ async function setup() {
 
 If you try to preview the results you will get an error because we didn't write `createLabelsAndButtons()` yet.
 
-## VI. <a id="section6">Creating the Start Scene
+## <div id="section6">VI. Creating the Start Scene</div>
 
 - Now we need to implement the `createLabelsAndButtons()` function - add this to **main.js**:
 
@@ -212,7 +212,7 @@ If you try to preview the results you will get an error because we didn't write 
 
 - You are now done coding the "start scene", so let's move on to the "game scene" (also, uncomment the line mentioned above if you haven't already).
 
-## VII. <a id="section7">Begin coding the Game Scene
+## <div id="section7">VII. Begin coding the Game Scene</div>
 
 - To get the "start game" button working, implement `startGame()` - this goes in **main.js**:
 
@@ -268,7 +268,7 @@ gameOverScene.addChild(playAgainButton);
 - **Reload the page to be sure that there are no code errors. Nothing will look different at this point.**
 - You are all done with `createLabelsAndButtons()` - that's a good thing!
 
-## VIII. <a id="section8">Getting the ship on the screen
+## <div id="section8">VIII. Getting the ship on the screen</div>
 
 Now we need to create a spaceship that the player can control. We will first create an ES6 class to encapsulate all of the ship state and behavior.
 
@@ -291,7 +291,7 @@ gameScene.addChild(ship);
 - **Reload the page, you should now see the ship in the upper-left corner of the screen - which is (0,0).**
 - Only a quarter of the ship is visible because we adjusted the `.anchor` so it would be drawn from its center rather than the upper-left corner, which is the default.
 
-## IX. <a id="section9">Pre-loading the audio files
+## <div id="section9">IX. Pre-loading the audio files</div>
 
 In this game we are using the [Howler](https://github.com/goldfire/howler.js/) audio library, which uses the high-performance Web Audio API to play audio files.
 (Recall that you imported this library at the top of the **game.html** file).
