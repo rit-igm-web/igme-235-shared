@@ -1,9 +1,11 @@
 # 1 - Intro to PixiJS
 
 ## Overview
+
 About PixiJS:
+
 - 2D Rendering Engine - put stuff on the screen - designed for speed and performance
-- Primarily you get sprites and a scene graph, but not a full game engine. Game engines have physics, sound, etc 
+- Primarily you get sprites and a scene graph, but not a full game engine. Game engines have physics, sound, etc
 - Uses the browser's [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) for drawing - which is fast because WebGL runs on the GPU!
 - Basically is a "wrapper" for WebGL.
 - Seamlessly falls back to [&lt;canvas>](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) on older browsers
@@ -13,7 +15,9 @@ About PixiJS:
 - Here is what the [creator of PixiJS says about it](https://www.youtube.com/watch?v=OWsz19OFUpc&t=32)
 
 ## Contents
+
 <!--- Local Navigation --->
+
 I. [PixiJS Resources](#section1)
 
 II. ["Hello PixiJS"](#section2)
@@ -39,6 +43,7 @@ X. [Review Exercise](#section10)
 <hr>
 
 ## I. <a id="section1">PixiJS Resources
+
 PixiJS has fantastic example code and an active community of developers. Here are some helpful links:
 
 - http://www.pixijs.com
@@ -48,12 +53,11 @@ PixiJS has fantastic example code and an active community of developers. Here ar
 - https://pixijs.com/8.x/guides
 - http://www.pixijs.com/tutorials
 
-
-and 
+and
 
 - https://github.com/kittykatattack/learningPixi
 
-PixiJS pretty much just gives you *sprites*, but there are many plugins available that give additional functionality: 
+PixiJS pretty much just gives you _sprites_, but there are many plugins available that give additional functionality:
 
 - https://github.com/pixijs
 - https://github.com/kittykatattack/bump (Old)
@@ -61,7 +65,6 @@ PixiJS pretty much just gives you *sprites*, but there are many plugins availabl
 - https://github.com/Nazariglez/pixi-keyboard
 - https://github.com/pixijs/pixi-sound
 - https://github.com/pixijs/pixi-particles
-
 
 ## II. <a id="section2">"Hello PixiJS"
 
@@ -89,32 +92,36 @@ Here is your first PixiJS program. Note that we are importing the PixiJS library
     </script>
   </body>
 </html>
-
 ```
 
 ### Which looks like this:
+
 ![Screenshot](_images/pixi-1.jpg)
 
 ### Notes
+
 - You should see the 600x400 black canvas that PixiJS created for us in the browser
 - You should also see this canvas in the Web Inspector
-- *Can you re-position the &lt;canvas> tag?* Sure, just use CSS style rules.
-- *Can you change the background color to something other than black?* Sure! With this line of code:
+- _Can you re-position the &lt;canvas> tag?_ Sure, just use CSS style rules.
+- _Can you change the background color to something other than black?_ Sure! With this line of code:
 
-`app.renderer.background.color = 0xff00ff; // Magenta!`
+```
+app.renderer.background.color = 0xff00ff; // Magenta!
+```
 
 **or**
 
 Set it when you initiate the app with the `init` method like so:
 
-`await app.init({ background: "#ff00ff", width: 640, height: 360 });`
-
+```
+await app.init({ background: "#ff00ff", width: 640, height: 360 });
+```
 
 ## III. <a id="section3">Drawing Shapes
+
 We can use PixiJS to create geometric shapes using PIXI.Graphics - https://pixijs.download/release/docs/scene.Graphics.html
 
 ### pixi-intro-2.html
-
 
 ```html
 <!DOCTYPE html>
@@ -155,19 +162,21 @@ We can use PixiJS to create geometric shapes using PIXI.Graphics - https://pixij
 ```
 
 ### Which looks like this:
+
 ![Screenshot](_images/pixi-2.jpg)
 
 ### Notes:
+
 - Here we used the Graphics() object to create 2 shapes. We gave the square above both a stroke (on border of shape) and a fill (the inside of the shape).
 - Graphics docs are here: https://pixijs.download/release/docs/scene.Graphics.html
 - Note that colors are in JavaScript's hexadecimal number format and always begin in `0x`. Fun fact - in JavaScript you can also create octal numbers - they begin with a zero - here's an example: `parseInt(0111) // 73`
-- Why are the circle and square not at the same "y" on the screen? Because the circles are drawn from the center by default, and the squares are draw from their upper-left corner by default. We can change the square's drawing behavior to match the circle's by changing this line  of code:
+- Why are the circle and square not at the same "y" on the screen? Because the circles are drawn from the center by default, and the squares are draw from their upper-left corner by default. We can change the square's drawing behavior to match the circle's by changing this line of code:
 
-	`square.rect(0, 0, 40, 40);`
+  `square.rect(0, 0, 40, 40);`
 
-	to this: 
+  to this:
 
-	`square.rect(-20, -20, 40, 40);`
+  `square.rect(-20, -20, 40, 40);`
 
 ## IV. <a id="section4">Two More Shapes
 
@@ -201,8 +210,8 @@ app.stage.addChild(poly);
 
 ![Screenshot](_images/pixi-3.jpg)
 
-
 ## V. <a id="section5">Adding DOM Button Events
+
 We can add DOM buttons to our web page, add event handlers to them, and then call properties and methods on our PixiJS objects.
 
 ### pixi-intro-3.html
@@ -315,15 +324,15 @@ One restriction you are going to run into is when your script tries to load an i
 Access to Image at 'file://button-130.png' from origin 'null' has been blocked by CORS policy: Invalid response.
 Origin 'null' is therefore not allowed access.
 ```
+
 <hr>
 
-### Solutions? 
+### Solutions?
 
 - Run the code off of a web server, which you can do by uploading your code to Banjo.
 - Use an IDE like [Brackets](http://brackets.io) - which creates a local web server for you to run your code on.
 - [You can also create a web server using Python](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) on your local machine.
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) turns off CORS by default, so you don't need a web server.
-
 
 ### pixi-intro-4.html
 
@@ -423,12 +432,13 @@ Origin 'null' is therefore not allowed access.
 ### Notes:
 
 - Sprite docs are here: https://pixijs.download/release/docs/scene.Sprite.html
-- here we are using PixiJS sprites as buttons, rather than using DOM buttons like we did last time. 
+- here we are using PixiJS sprites as buttons, rather than using DOM buttons like we did last time.
 - note than the PixiJS `on` method is similar to `addEventListener()` in the DOM.
 - the `pointerover` and similar events will work with both mouse events and touch events.
 - note our handy helper function `makeRectangle()`
 
 ## VII. <a id="section7">Using the Demos
+
 Head to this demo page - https://pixijs.com/8.x/examples - which was linked above.
 
 These demos are really helpful in that they nicely illustrate many of the features of PixiJS, and that you can also edit the code in place and see "live" changes.
@@ -436,21 +446,23 @@ These demos are really helpful in that they nicely illustrate many of the featur
 You should also be able to copy/paste much of the code into our **pixi-1.html** template and try it out.
 
 ## VIII. <a id="section8">Nota Bene
+
 Nothing for now.
 
 ## IX. <a id="section9">Review Questions
+
 1. What does **CDN** stand for? What are the advantages of using a CDN?
 1. What does **CORS** stand for? How can you get around it?
 1. Give 2 ways to set up a local web server on your personal computer.
 1. What are the hexadecimal color values for white, black, and green?
 
+## X. <a id="section10">In-Class Exercise. You do not need to submit this.
 
-## X. <a id="section10">In-Class Exercise.  You do not need to submit this.
-Make a copy of the  **pixi-intro-4.html** page and name it **pixi-js-1-HW.html** and:
+Make a copy of the **pixi-intro-4.html** page and name it **pixi-js-1-HW.html** and:
+
 1. add a PixiJS Rounded Rectangle to the screen (try to figure out, but it's optional)
 1. modify the button code so that the existing buttons also target and effect the rounded rect.
 1. add another PixiJS "sprite button" that reduces the size of all 3 shapes everytime it is clicked.
-
 
 <hr><hr>
 
