@@ -23,8 +23,8 @@ Gameplay: Arcade
 
 Quote
 
-	This definitely goes under the heading of "Games That Were Made While a Programmer Was on Drugs," or at least had a good imagination. And maybe they were into horror movies too.
-		-- https://www.mobygames.com/mobyrank/source/sourceId,540/
+"It's 11:40 p.m. on a Saturday night and I'm doing a quick update for one of the best arcade to console translations for the Atari 2600, Dig Dug. Having a tough final exam coming up in two days, I've decided not to spend time trying to think up a good intro like I usually do with new reviews and updates; a classic memory will have to do. "
+-- https://www.honestgamers.com/1349/atari-2600/dig-dug/review.html
 
 
 Source
