@@ -8,7 +8,9 @@ We've got some specialized images for you to add to your Dig Dug page.  An SVG i
 
 1. View it in your browser quickly to see what it looks like.  Notice how it resizes smoothly at all sizes.
 
-1. Open the file in VS Code.  Turn Word-wrap on.  (It's in the View menu).  Notice the style element near the top with several style rules, all of which have a color in hexadecimal code.  Go ahead and edit this file to figure out which one changes the outer color in the logo.  Change it to something else (maybe "teal"). 
+1. Open the file in VS Code.  You'll see the image preview (most likely).  We want to see the text/code and math _behind_ the SVG, so you'll need to right-click on the filename in the Explorer pane and choose "(Re)Open with...".  From there, select Text Editor from the dropdown at the top of the screen.  It's possible to make this behavior permanent through settings, but for now, this is a quick way to see what we want.
+
+1. Now that you see the SVG file in code, turn Word-wrap on.  (It's in the View menu).  Notice the style element near the top with several style rules, all of which have a color in hexadecimal code.  Go ahead and edit this file to figure out which one changes the outer color in the logo.  Change it to something else (maybe "teal"). 
    - Note that hexadecimal colors start with the # symbol.  If you want to use a named color, remove the #.
   
 1. Save your edited file.
