@@ -10,7 +10,7 @@ Start by downloading the starter file located here: [Frameworks Starter Files](c
 
 2. Go back to VS Code and look at the code. Notice we have a style.css file in our **css** folder. There are some basic CSS directives applied to our **default-start.html** file, nothing too fancy.
 
-3. The body of the **default-start.html** file is pretty basic. To simplify our development for the exercise, we are not using images, but rely on a third party site called **[placeholder.com](https://placeholder.com/)**, this is a handy utility site that just provides placeholder images to whatever size you want. The remainder of the content is relatively basic, we also have an HTML Table in the Main, as well as a basic form (we know we’ve not covered tables or forms, but they are a standard part of web development that you'll encounter at some point). 
+3. The body of the **default-start.html** file is pretty basic. To simplify our development for the exercise, we are not using images, but rely on a third party sites like **[placeholder.com](https://placeholder.com/)** or **[placehold.co]([https://placeholder.com/](https://placehold.co/))**, this is a handy utility site that just provides placeholder images to whatever size you want. *Helper tools sites like these are useful to us as web developers.* The remainder of the content is relatively basic, we also have an HTML Table in the Main, as well as a basic form (we know we’ve not covered tables or forms, but they are a standard part of web development that you'll encounter at some point). 
 
 ## Part Two - Bootstrap
 
@@ -246,6 +246,7 @@ That's it for now. We recommend taking some time and exploring the documentation
 Be sure you upload your work to Banjo, zip up your work and submit the zip file and link to the assignment folder (Since there is no index.html it should load up a list of the files in your directory -- wherever you put it).
 
 We should be able to click to 3 different bootstrap files, 3 materialize files, and a fontawesome file.
+
 
 
 
