@@ -10,7 +10,7 @@ Start by downloading the starter file located here: [Frameworks Starter Files](c
 
 2. Go back to VS Code and look at the code. Notice we have a style.css file in our **css** folder. There are some basic CSS directives applied to our **default-start.html** file, nothing too fancy.
 
-3. The body of the **default-start.html** file is pretty basic. To simplify our development for the exercise, we are not using images, but rely on a third party sites like **[placeholder.com](https://placeholder.com/)** or **[placehold.co](https://placehold.co/)**, this is a handy utility site that just provides placeholder images to whatever size you want. *Helper tools sites like these are useful to us as web developers.* The remainder of the content is relatively basic, we also have an HTML Table in the Main, as well as a basic form (we know we’ve not covered tables or forms, but they are a standard part of web development that you'll encounter at some point). 
+3. The body of the **default-start.html** file is pretty basic. To simplify our development for the exercise, we are not using images, but relying on a third party site **[placehold.co](https://placehold.co/)**, this is a handy utility site that just provides placeholder images to whatever size and color you want. *Helper tools like these are useful to us as web developers.* The remainder of the content is relatively basic, we also have an HTML Table in the Main, as well as a basic form (we know we’ve not covered tables or forms, but they are a standard part of web development that you'll encounter at some point). 
 
 ## Part Two - Bootstrap
 
@@ -26,7 +26,7 @@ Copy it from the web page or from right here:
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    ```
 
-4. Next, below the styles.css link, paste the given links to Javascript libraries.  The bootstrap site suggests you add this code at the bottom of your web page right before the closing </body> tag.  However, with a situation like this, you can still put them in the head section.
+4. Next, below the styles.css link, paste the given links to JavaScript libraries.  The bootstrap site suggests you add this code at the bottom of your web page right before the closing </body> tag.  However, with a situation like this, you can still put them in the head section.
 
 Copy from the web page or from right here:
    
@@ -41,7 +41,7 @@ Copy from the web page or from right here:
 
 7. In VS Code, duplicate the **bootstrap.html** and name the new file **bootstrap-navbar.html**, and in the new file empty out the body content.
 
-8. Let's first start with the NavBar, go to https://getbootstrap.com/docs/5.1/components/navbar/ and we will copy the first example code into our newly emptied body (here it is it, also):
+8. Let's first start with the NavBar, go to https://getbootstrap.com/docs/5.1/components/navbar/ and we will copy the first example code into our newly emptied body (here it is, also):
 
 ```
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -82,40 +82,41 @@ Copy from the web page or from right here:
 </nav>
 ```
 
-9. Now save and reload this page and see the results. Resize the browser window, notice what happens to the navigation? Go back into VS Code and look closely at the code, do you see the large number of CSS classes that each element has? All those classes are what makes the navbar function, there are also a number of data and aria attributes used as well. Feel free to experiment with the navbar, add some links, or even try to add another pulldown.
+9. Now save and reload this page and see the results. Resize the browser window, notice what happens to the navigation? Go back into VS Code and look closely at the code. Do you see the large number of CSS classes that each element has? All those classes are what makes the navbar function, there are also a number of data and aria attributes used as well. Feel free to experiment with the navbar, add some links, or even try to add another dropdown.
 
 10. Lastly, let's look at a Slideshow Carousel. In VS Code, let's duplicate the current **bootstrap-navbar.html** and rename the new file to **bootstrap-carousel.html**. In the new file, clear out the body tag.
 
 11. Now we will utilize the #slideshow rules found in our **style.css**.
 
-12. Go take a look at this url: https://getbootstrap.com/docs/5.1/components/carousel/. You can refer to this page for more information about the Carousel, but we'll be putting in some of our own code for this next example. The HTML below is based off the first sample, but we've replaced the images with 5 slides from placeholder.com.
+12. Go take a look at this url: https://getbootstrap.com/docs/5.1/components/carousel/. You can refer to this page for more information about the Carousel, but we'll be putting in some of our own code for this next example. The HTML below is based off the first sample, but we've replaced the images with 5 slides from placehold.co.
 
 Copy and paste this into your body:
 
 ```
-    <div id="container">
-      <div id="slideshow">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://via.placeholder.com/500x300/0000FF/808080?text=Slide1" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="https://via.placeholder.com/500x300/00AAFF/808080?text=Slide2" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-               <img src="https://via.placeholder.com/500x300/00FFAA/000000?text=Slide3" class="d-block w-100" alt="...">
-             </div>
-             <div class="carousel-item">
-               <img src="https://via.placeholder.com/500x300/AADD00/000000?text=Slide4" class="d-block w-100" alt="...">
-             </div>
-             <div class="carousel-item">
-               <img src="https://via.placeholder.com/500x300/22FADA/000000?text=Slide5" class="d-block w-100" alt="...">
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
+<div id="container">
+  <div id="slideshow">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://placehold.co/500x300/0000FF/808080?text=Slide1" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://placehold.co/500x300/00AAFF/808080?text=Slide2" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://placehold.co/500x300/00FFAA/000000?text=Slide3" class="d-block w-100" alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+          <img src="https://placehold.co/500x300/AADD00/000000?text=Slide4" class="d-block w-100" alt="Slide 4">
+        </div>
+        <div class="carousel-item">
+          <img src="https://placehold.co/500x300/22FADA/000000?text=Slide5" class="d-block w-100" alt="Slide 5">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
  ```
 
 13. Save and preview this file, observe the glory of a fully functional carousel slideshow!  You'll need to wait about 5 seconds to see it change.
@@ -131,7 +132,7 @@ Copy and paste this into your body:
 
 2. Back in VS Code, make a copy of the **default-start.html** file and rename to **materialize.html**, and open this file. 
 
-3. In the **HEAD** section of the **materialize.html** file paste the links to the CSS and Javascript code from the CDN section into your file *(Be sure the link to the CSS goes BEFORE your style.css, and link to the JavaScript AFTER)*:
+3. In the **HEAD** section of the **materialize.html** file paste the links to the CSS and JavaScript code from the CDN section into your file *(Be sure the link to the CSS goes BEFORE your style.css, and link to the JavaScript AFTER)*:
    
 ```
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -163,30 +164,30 @@ Copy and paste this into your body:
 
 9. Now let's take a look at the Materialize Carousel. Go to your web browser and open a window or tab to https://materializecss.com/carousel.html. This is the reference page for the Materialize Carousel.
 
-10. in VS Code, make a copy of your **materialize.html** file and rename it to **materialize-carousel.html** and once again, clear out the body. Then add the following code into the body. 
+10. In VS Code, make a copy of your **materialize.html** file and rename it to **materialize-carousel.html** and once again, clear out the body. Then add the following code into the body. 
 
-    ```
-    <div class="carousel">
-            <a class="carousel-item" href="#"><img src="https://via.placeholder.com/500x300/0000FF/808080?text=Slide1"></a>
-            <a class="carousel-item" href="#"><img src="https://via.placeholder.com/500x300/00AAFF/808080?text=Slide2"></a>
-            <a class="carousel-item" href="#"><img src="https://via.placeholder.com/500x300/00FFAA/000000?text=Slide3"></a>
-            <a class="carousel-item" href="#"><img src="https://via.placeholder.com/500x300/AADD00/000000?text=Slide4"></a>
-            <a class="carousel-item" href="#"><img src="https://via.placeholder.com/500x300/22FADA/000000?text=Slide5"></a>
-        </div>
-    ```
+```
+<div class="carousel">
+  <a class="carousel-item" href="#"><img src="https://placehold.co/500x300/0000FF/808080?text=Slide1" alt="Slide 1"></a>
+  <a class="carousel-item" href="#"><img src="https://placehold.co/500x300/00AAFF/808080?text=Slide2" alt="Slide 2"></a>
+  <a class="carousel-item" href="#"><img src="https://placehold.co/500x300/00FFAA/000000?text=Slide3" alt="Slide 3"></a>
+  <a class="carousel-item" href="#"><img src="https://placehold.co/500x300/AADD00/000000?text=Slide4" alt="Slide 4"></a>
+  <a class="carousel-item" href="#"><img src="https://placehold.co/500x300/22FADA/000000?text=Slide5" alt="Slide 5"></a>
+</div>
+```
 
-    You can see this is just a simple div tag with some href images, what's important here is notice the class names assigned to all the elements.
+You can see this is just a simple div tag with some href images, what's important here is notice the class names assigned to all the elements.
 
 11. Now after the div, we will place a script tag to put some JavaScript on the page that initializes our slideshow. 
 
-    ```
-    <script>
-    	var elems = document.querySelectorAll('.carousel');
-    	var instances = M.Carousel.init(elems);                
-    </script>
-    ```
+```
+<script>
+  const elems = document.querySelectorAll('.carousel');
+  const instances = M.Carousel.init(elems);
+</script>
+```
 
-    We won't dwell on what this code means, but it essentially initializes our carousel, without this, nothing happens.
+We won't dwell on what this code means, but it essentially initializes our carousel, without this, nothing happens.
 
 12. Now go back to the web browser and load this page, you should see a fancy looking carousel. Not bad with only a little bit of code! Feel free to try out the other types of carousels, such as the slider carousel.
 
@@ -204,7 +205,7 @@ Copy and paste this into your body:
 
 5. In a web browser window or tab, go to https://fontawesome.com/. We will refer back to this site for finding icons. They don't provide an easy-to-get-to CDN link, so we'll use another resource to get a CDN, open a new tab or window and go to https://cdnjs.com/libraries/font-awesome.
 
-6. From cdnjs, use the pull-down to select the most recent non-beta version (currently 5.15.4) and copy the first css link (make sure to use the "copy link tag" button so that you get the full HTML) and paste it into the HEAD section of your fontawesome.html file, once again, be sure this is before the link to your style.css link.
+6. From cdnjs, use the pull-down to select the most recent non-beta version (currently 5.15.4) and copy the first css link (make sure to use the "copy link tag" button so that you get the full HTML) and paste it into the HEAD section of your fontawesome.html file, once again, be sure this is before your style.css link.
 
 This is the URL that you'll be using (but you need to include it in a full link tag)
 ```
@@ -245,7 +246,8 @@ That's it for now. We recommend taking some time and exploring the documentation
 
 Be sure you upload your work to Banjo, zip up your work and submit the zip file and link to the assignment folder (Since there is no index.html it should load up a list of the files in your directory -- wherever you put it).
 
-We should be able to click to 3 different bootstrap files, 3 materialize files, and a fontawesome file.
+We should be able to click to 3 different Bootstrap files, 3 Materialize files, and a Font Awesome file.
+
 
 
 
