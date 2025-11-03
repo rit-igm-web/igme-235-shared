@@ -51,6 +51,7 @@ For this project you are creating a JavaScript driven Web application that utili
       - \*Starters for the above 3 APIs can be found in the [web-service-app-starters.md](../tutorial/web-service-app-starters.md)
     - REST Countries: https://restcountries.com/  
       **Recent additions to the list:**
+    - Disney API: https://disneyapi.dev/
     - Pokémon TCG API: https://docs.pokemontcg.io/
     - Pokemon API: https://pokeapi.co/docs/v2
     - Rick and Morty API (REST version): https://rickandmortyapi.com/documentation
