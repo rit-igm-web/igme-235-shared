@@ -267,7 +267,7 @@ We need to write code to build a URL to the web service. This URL will contain t
 
 - You can see that you are getting back a JS Object literal, and there is a top-level property named `data` that contains an array of objects. Each of these objects represents a animated GIF on Giphy - note some of the properties that will come in handy: `url`, `rating`, `width`, `height` and so on.
 
-- If your JSON isn't as nicely formatted as mine, it's because I am using the Chrome JSON Viewer extension which you can get here: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+- If your JSON isn't as nicely formatted as mine, it's because I am using a Chrome extension which improves the way that JSON displays.  Here's one that we recommend which will give a similar collapsable layout: [https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
 ![Web Page](_images/gif-finder-5.jpg)
 
