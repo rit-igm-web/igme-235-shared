@@ -146,7 +146,7 @@ XI. [Totally Optional](#section11)
 		button.green{
 			border-color: #8fc800;
 	  		background: #8fc800;
-	  		background: linear-gradient(top, #8fc800 0%,#438c00 100%);
+	  		background: linear-gradient(to top, #8fc800 0%,#438c00 100%);
 		}
 		
 		button:hover{
