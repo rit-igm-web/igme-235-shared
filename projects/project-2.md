@@ -52,7 +52,7 @@ For this project you are creating a JavaScript driven Web application that utili
     - REST Countries: https://restcountries.com/  
       **Recent additions to the list:**
     - Disney API: https://disneyapi.dev/
-    - Pokémon TCG API: https://docs.pokemontcg.io/
+    - TV Maze API: https://tvmaze.com/api
     - Pokemon API: https://pokeapi.co/docs/v2
     - Rick and Morty API (REST version): https://rickandmortyapi.com/documentation
     - Scryfall Magic: The Gathering Search: https://scryfall.com/docs/api
