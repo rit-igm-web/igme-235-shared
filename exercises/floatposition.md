@@ -33,6 +33,10 @@ Before you get started, the instructor will give you a preview of the kind of th
     4. Make it stay in the top right corner of the browser window even as the page scrolls. (this requires position:fixed)
     5. Try sending it to a deeper level so that other things scroll over top of it.  (this will require a negative z-index)
 
+Heres a sample of what mine looks like AWFUL, but just let us experiment with float a little bit!
+<img width="1087" height="865" alt="floatpart-tetris" src="https://github.com/user-attachments/assets/f622f8e0-e363-4bd7-b20d-5b6bb6149df7" />
+
+
 ## If you feel so inclined, otherwise move on to the next exercise:
 - Get your content off of the edges and get your tetromino images to fit within their boxes.
 
