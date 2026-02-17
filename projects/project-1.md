@@ -52,6 +52,7 @@ Before you start building, you'll submit a proposal with your chosen design and 
 
 #### What to do:
 1. Select one of these pre-chosen page layouts:
+
 <a href="_images/subaru.pdf"><img width="19%" alt="Subaru Drive Magazine Page" src="_images/subaru.png"></a> <a href="_images/aliens.pdf"><img width="19%" alt="Conspiracy Book Page" src="_images/aliens.png"></a> <a href="_images/athletics.pdf"><img width="19%" alt="RIT Magazine Page" src="_images/athletics.png"></a> <a href="_images/intel.pdf"><img width="19%" alt="Intel Poster (Challenging!)" src="_images/intel.png"></a> <a href="_images/ivanpope.pdf"><img width="19%" alt="Ivan Pope - .net" src="_images/ivanpope.png"></a>
 <a href="_images/1981.pdf"><img width="19%" alt="Dreamwatch - Destination 1981" src="_images/1981.png"></a> <a href="_images/buzz.pdf"><img width="19%" alt="Verge - Buzz" src="_images/buzz.png"></a> <a href="_images/surfboard.pdf"><img width="19%" alt="Internet World - Surfboard" src="_images/surfboard.png"></a> <a href="_images/thespot.pdf"><img width="19%" alt="Websight Mag - thespot" src="_images/thespot.png"></a>
 	- Each of the above images is a link to a pdf version of the layout.  You can go ahead, download this pdf and edit it as necessary to indicate your layout plans (see below) -- also, include this pdf in your src subfolder & include it as a link in your doc.html
