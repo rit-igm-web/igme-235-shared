@@ -2,6 +2,16 @@
 
 For this project, you will select an appropriate topic (a list is below) and create a website beginning with a "build to spec" phase followed by an "adapt to content" phase.
 
+> **Key Requirements at a Glance** (details in sections below):
+> - **Layout**: CSS Grid and/or Flexbox — no frameworks (Bootstrap, Tailwind, etc.)
+> - **Layering**: Text over images or foreground/background elements — `background-color` alone doesn't count (this is 15% of Phase 2!)
+> - **Responsive**: Layout must *change* at mobile widths, not just shrink
+> - **Navigation**: Anchor links that scroll the user to sections of the page
+> - **Link styles**: All five states — `a:link`, `a:visited`, `a:focus`, `a:hover`, `a:active`
+> - **Images**: Optimized for web — resize to display dimensions, don't just scale a 4MB file in CSS
+> - **Documentation**: `doc.html` with sketches, resources, and process notes (10% of grade)
+> - **No Photoshop text**: All text as real HTML characters
+
 ## About the Overall Project
 
 ### Potential Topics for this project:
@@ -35,7 +45,7 @@ Here is an illustration of the file structure you should use:
 
 ### FINAL Content Requirements
 - Include multiple images of at least two different sizes.  They should be relevant to the chosen topic, of course.
-- Demonstrate some kind of layering, such as a background behind a foreground element, or text that appears over an image.  A colored background behind text is not enough to meet this requirement.
+- **Demonstrate some kind of layering** — such as a background image behind a foreground element, or text that appears over an image.  A colored `background-color` behind text is **not enough** to meet this requirement.  Think: `z-index`, `position: relative/absolute`, or background images with content layered on top.
 - All text must be added as actual text characters in the HTML, no adding text to an image with Photoshop.
 - Your final design must "adapt" to accomodate as much information as necessary to fully cover your subject (see more in the "Phase 2" expectations).
 
@@ -43,7 +53,9 @@ Here is an illustration of the file structure you should use:
 
 ### What's required for Part 1 (the "build to spec" phase)
 
-Web developers commonly work in a team with others such as Content Strategists, User Experience designers, and Graphic Artists.  For the first phase of this project, we will simulate that by asking you to recreate a design that some other Graphic Artist has already created and "published" in print.  It's not always true that a printed design can be fully reproduced on the web, especially when you start to take varying browser and device sizes into account.  But for this first phase of the Project, you should aim to get as close to the printed design as you possibly can, while still thinking about how your page will need to adapt in the 2nd phase to add responsiveness and greater page length as you pour your own content into it.
+Web developers commonly work in a team — Content Strategists, UX designers, Graphic Artists — and are often handed a design to implement rather than creating it from scratch.  For Phase 1, we simulate that: you'll take an existing print design (a magazine page, poster, or book layout) and recreate it in HTML & CSS.
+
+Your goal is to match the print layout as closely as possible — layout, typography, colors, image placement.  Not every print detail will translate perfectly to the web, and that's OK.  Where the print design doesn't translate directly, use your judgment: the web offers tools that print doesn't (hover states, fluid sizing, scroll) so adapt thoughtfully rather than forcing a bad fit.  Throughout Phase 1, keep in mind that in Phase 2 you'll need to make this layout responsive and fill it with your own content.
 
 #### What to do:
 1. Select one of these pre-chosen page layouts:  
@@ -99,9 +111,9 @@ For Phase 2, you'll copy your spec.html file to index.html and make changes as a
 - CSS selectors and rules will be used for formatting and positioning.
 - Most (if not all) of the style rules will be located in an external style sheet.
 - There will be at least 10 style declarations (rules) in your external style sheet.  Use _class and ID_ selectors as appropriate.
-- Utilize custom link styles on all your pages by utilizing the `a:link, a:visited, a:focus, a:hover,` and `a:active` selectors.
+- **Utilize custom link styles** on all your pages by styling all five states: `a:link`, `a:visited`, `a:focus`, `a:hover`, and `a:active`.
 - Reasonably valid CSS - see note for HTML above.
-- Images and other media are properly optimized (both file size, image format, and image dimensions) for screen display
+- **Images must be properly optimized** for screen display — resize to approximate display dimensions before uploading (a 4000px-wide photo scaled to 400px in CSS still downloads at full size).  Use appropriate formats (JPEG for photos, PNG for graphics/transparency, SVG for logos/icons).
 
 ## Documentation Requirements - doc.html
 - a link to the Original Design Source PDF (whether it was provided or chosen by you)
