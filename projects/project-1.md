@@ -57,8 +57,11 @@ Web developers commonly work in a team — Content Strategists, UX designers, Gr
 
 Your goal is to match the print layout as closely as possible — layout, typography, colors, image placement.  Not every print detail will translate perfectly to the web, and that's OK.  Where the print design doesn't translate directly, use your judgment: the web offers tools that print doesn't (hover states, fluid sizing, scroll) so adapt thoughtfully rather than forcing a bad fit.  Throughout Phase 1, keep in mind that in Phase 2 you'll need to make this layout responsive and fill it with your own content.
 
+#### Proposal
+Before you start building, you'll submit a proposal with your chosen design and a brief description of your Phase 2 topic.  This lets your instructor flag any issues early (too simple, too complex, etc.).  **Check myCourses for your section's proposal deadline and submission instructions.**
+
 #### What to do:
-1. Select one of these pre-chosen page layouts:  
+1. Select one of these pre-chosen page layouts:
 <a href="_images/subaru.pdf"><img width="19%" alt="Subaru Drive Magazine Page" src="_images/subaru.png"></a> <a href="_images/aliens.pdf"><img width="19%" alt="Conspiracy Book Page" src="_images/aliens.png"></a> <a href="_images/athletics.pdf"><img width="19%" alt="RIT Magazine Page" src="_images/athletics.png"></a> <a href="_images/intel.pdf"><img width="19%" alt="Intel Poster (Challenging!)" src="_images/intel.png"></a> <a href="_images/ivanpope.pdf"><img width="19%" alt="Ivan Pope - .net" src="_images/ivanpope.png"></a>
 <a href="_images/1981.pdf"><img width="19%" alt="Dreamwatch - Destination 1981" src="_images/1981.png"></a> <a href="_images/buzz.pdf"><img width="19%" alt="Verge - Buzz" src="_images/buzz.png"></a> <a href="_images/surfboard.pdf"><img width="19%" alt="Internet World - Surfboard" src="_images/surfboard.png"></a> <a href="_images/thespot.pdf"><img width="19%" alt="Websight Mag - thespot" src="_images/thespot.png"></a>
 	- Each of the above images is a link to a pdf version of the layout.  You can go ahead, download this pdf and edit it as necessary to indicate your layout plans (see below) -- also, include this pdf in your src subfolder & include it as a link in your doc.html
