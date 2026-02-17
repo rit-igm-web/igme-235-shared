@@ -2,16 +2,6 @@
 
 For this project, you will select an appropriate topic (a list is below) and create a website beginning with a "build to spec" phase followed by an "adapt to content" phase.
 
-> **Key Requirements at a Glance** (details in sections below):
-> - **Layout**: CSS Grid and/or Flexbox — no frameworks (Bootstrap, Tailwind, etc.)
-> - **Layering**: Text over images or foreground/background elements — `background-color` alone doesn't count (this is 15% of Phase 2!)
-> - **Responsive**: Layout must *change* at mobile widths, not just shrink
-> - **Navigation**: Anchor links that scroll the user to sections of the page
-> - **Link styles**: All five states — `a:link`, `a:visited`, `a:focus`, `a:hover`, `a:active`
-> - **Images**: Optimized for web — resize to display dimensions, don't just scale a 4MB file in CSS
-> - **Documentation**: `doc.html` with sketches, resources, and process notes (10% of grade)
-> - **No Photoshop text**: All text as real HTML characters
-
 ## About the Overall Project
 
 ### Potential Topics for this project:
