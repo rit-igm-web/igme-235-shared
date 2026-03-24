@@ -197,7 +197,7 @@ let car1 = {
 // 2- we need to use "this" whenever we refer to a property of the current object
 		this.speed += howMuch; 
 		if(this.speed > this.maxSpeed){
-			this.speed = maxSpeed;
+			this.speed = this.maxSpeed;
 		}
 	},
 	stop: function(){
@@ -238,7 +238,7 @@ Instead, we can write a function to create these cars for us.
 let speedUp = function(howMuch){
 		this.speed += howMuch; 
 		if(this.speed > this.maxSpeed){
-			this.speed = maxSpeed;
+			this.speed = this.maxSpeed;
 		}
 }
 
