@@ -120,16 +120,21 @@ console.log(`colors.length = ${colors.length}`); // 0
 ```
                                     
 
-### I. Copy an item from an index position
+### I. Copy items from an array
+
+`Array.slice()` takes a `start` index and an `end` index (exclusive — the element at `end` is NOT included). If you omit `end`, it copies from `start` to the end of the array. Negative numbers select from the end of the array.
 
 ```javascript
 let fruits = ["apples","oranges","bananas"];
-position = 0;
-let numberToCopy = 2;
-let copiedItems = fruits.slice(position,numberToCopy);
+let copiedItems = fruits.slice(0,2); // copies index 0 and 1
 
 console.log(fruits); // ["apples","oranges","bananas"]
 console.log(copiedItems); // ["apples","oranges"]
+
+// more examples
+fruits.slice(1,2);  // ["oranges"] - just index 1
+fruits.slice(1);    // ["oranges","bananas"] - index 1 to the end
+fruits.slice(-2);   // ["oranges","bananas"] - last 2 items
 ```
 
 ### J. Copy the whole array
@@ -204,9 +209,7 @@ console.log(`colors.length = ${colors.length}`); // 0
 
 // I
 let fruits = ["apples","oranges","bananas"];
-position = 0;
-let numberToCopy = 2;
-let copiedItems = fruits.slice(position,numberToCopy);
+let copiedItems = fruits.slice(0,2); // copies index 0 up to (not including) index 2
 console.log(fruits); // ["apples","oranges","bananas"]
 console.log(copiedItems); // ["apples","oranges"]
 
