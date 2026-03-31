@@ -47,7 +47,7 @@ For this project you are creating a JavaScript driven Web application that utili
   - Because APIs change from time to time this is not a guarantee that these APIs will be smooth sailing, but they have been shown to work.
     - Dog API\*: https://dog.ceo/dog-api/
     - Jikan Unofficial MyAnimeList API\*: https://jikan.docs.apiary.io/
-    - The Amiibo API\*: http://www.amiiboapi.com
+    - The Amiibo API\*: https://www.amiiboapi.org
       - \*Starters for the above 3 APIs can be found in the [web-service-app-starters.md](../tutorial/web-service-app-starters.md)
     - REST Countries: https://restcountries.com/  
       **Recent additions to the list:**
@@ -69,7 +69,9 @@ For this project you are creating a JavaScript driven Web application that utili
   - Look for an API that supports _CORS_ (Cross-origin resource sharing) - if the API says **NO** in the **CORS** column then it will **NOT work** well for this project
     - **DO NOT** use any API that requires _OAuth_ authentication
     - if an API requires an API Key, be sure that there is a "free tier", and that the API does not have a short trial period
-    - Here are a couple of lists to check out:
+    - **Tip:** The easiest APIs to work with are ones that require **no authentication at all** — look for APIs where the Auth column says "No". You can get up and running immediately without signing up for anything.
+    - Here are some lists to check out:
+      - https://github.com/public-api-lists/public-api-lists <- Large categorized directory with Auth and CORS columns. **Start here!**
       - https://github.com/toddmotto/public-apis <- Includes CORS column.
       - https://github.com/abhishekbanthia/Public-APIs <- Less info about each API.
     - **Important note:** Most of the "sports score" APIs have strict rate limits and/or short trial periods. In the past, most students attempting to use these APIs on their projects ended up having to change their project idea to something else at the last minute. Use such APIs at your own risk.
