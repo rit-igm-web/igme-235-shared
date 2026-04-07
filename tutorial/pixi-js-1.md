@@ -464,7 +464,15 @@ We're loading PixiJS from the CDN, which puts everything on a global `PIXI` obje
    const { Application, Assets, Sprite, Container, Text } = PIXI;
    ```
 
-   Just match the names to whatever the example imported.
+   Just match the names to whatever the example imported. If you want a "kitchen sink" line that covers most of what you'll hit in this course, this is a safe starting point — delete the names you don't use:
+
+   ```javascript
+   const {
+     Application, Assets, Sprite, Texture, Container, Graphics,
+     Text, BitmapText, AnimatedSprite, TilingSprite, NineSliceSprite,
+     Point, Rectangle, Circle, Polygon, Color, Ticker
+   } = PIXI;
+   ```
 
 **Gotchas:**
 
