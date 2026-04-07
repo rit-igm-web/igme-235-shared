@@ -445,6 +445,33 @@ These demos are really helpful in that they nicely illustrate many of the featur
 
 You should also be able to copy/paste much of the code into our **pixi-1.html** template and try it out.
 
+### Adapting examples from pixijs.com to our CDN setup
+
+The official examples on pixijs.com are written for the **npm/bundler** workflow, so they start with an `import` line like:
+
+```javascript
+import { Application, Assets, Sprite, Container, Text } from 'pixi.js';
+```
+
+We're loading PixiJS from the CDN, which puts everything on a global `PIXI` object instead. So if you paste an example as-is, you'll get errors like `Sprite is not defined` or `Assets is not defined`.
+
+**The golden rule:** look at the example's `import { ... }` line, and either:
+
+1. **Prefix every class with `PIXI.`** — `new Sprite()` becomes `new PIXI.Sprite()`, `Assets.load(...)` becomes `PIXI.Assets.load(...)`, etc.
+2. **Or destructure once at the top of your `<script type="module">`** so the rest of the example code pastes in unchanged:
+
+   ```javascript
+   const { Application, Assets, Sprite, Container, Text } = PIXI;
+   ```
+
+   Just match the names to whatever the example imported.
+
+**Gotchas:**
+
+- The example viewer on pixijs.com sometimes hides the imports — click through to the full source on GitHub if you don't see them.
+- A few add-on packages (like **pixi-filters** for fancy filters such as `GlowFilter`, **pixi-sound**, etc.) are *separate* CDN scripts. If `PIXI.SomeFilter` is undefined, you probably need to add another `<script src="...">` tag for that package — those classes live under `PIXI.filters.*`.
+- `await` at the top of your script only works inside `<script type="module">` (which we're already using).
+
 ## VIII. <a id="section8">Nota Bene
 
 Nothing for now.
