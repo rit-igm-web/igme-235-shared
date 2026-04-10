@@ -157,9 +157,8 @@ Here we are going to place most of the implementation details in the base class 
 class Circle extends PIXI.Graphics {
   constructor(radius, color = 0xff0000, x = 0, y = 0) {
     super();
-    this.beginFill(color);
-    this.drawCircle(0, 0, radius);
-    this.endFill();
+    this.circle(0, 0, radius);
+    this.fill(color);
     this.x = x;
     this.y = y;
     this.radius = radius;
