@@ -53,7 +53,7 @@ We will hook up the code that listens for clicks in `startGame()` - all you have
 ```javascript
 ...
 gameScene.visible = true;
-// app.view.onclick = fireBullet; // <-- uncomment this line
+// app.canvas.onclick = fireBullet; // <-- uncomment this line
 levelNum = 1;
 ...
 ```
@@ -64,7 +64,7 @@ We should also removes the event listener, just uncomment this line in the `end(
 explosions.forEach((e) => gameScene.removeChild(e));
 explosions = [];
 
-// app.view.onclick = null; // disable the onclick event // <--uncomment this line
+// app.canvas.onclick = null; // disable the onclick event // <--uncomment this line
 
 gameOverScene.visible = true;
 gameScene.visible = false;

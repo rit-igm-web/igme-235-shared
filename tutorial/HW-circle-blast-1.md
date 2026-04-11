@@ -242,23 +242,25 @@ If you try to preview the results you will get an error because we didn't write 
 ```javascript
 // 3 - set up `gameOverScene`
 // 3A - make game over text
-let gameOverText = new PIXI.Text("Game Over!\n        :-O", {
-  fill: 0xffffff,
-  fontSize: 64,
-  fontFamily: "Futura",
-  stroke: 0xff0000,
-  strokeThickness: 6,
+let gameOverText = new PIXI.Text({
+  text: "Game Over!\n        :-O",
+  style: {
+    fill: 0xffffff,
+    fontSize: 64,
+    fontFamily: "Futura",
+    stroke: { color: 0xff0000, width: 6 },
+  },
 });
 gameOverText.x = sceneWidth / 2 - gameOverText.width / 2;
 gameOverText.y = sceneHeight / 2 - 160;
 gameOverScene.addChild(gameOverText);
 
 // 3B - make "play again?" button
-let playAgainButton = new PIXI.Text("Play Again?", buttonStyle);
+let playAgainButton = new PIXI.Text({ text: "Play Again?", style: buttonStyle });
 playAgainButton.x = sceneWidth / 2 - playAgainButton.width / 2;
 playAgainButton.y = sceneHeight - 100;
-playAgainButton.interactive = true;
-playAgainButton.buttonMode = true;
+playAgainButton.eventMode = "static";
+playAgainButton.cursor = "pointer";
 playAgainButton.on("pointerup", startGame); // startGame is a function reference
 playAgainButton.on("pointerover", (e) => (e.target.alpha = 0.7)); // concise arrow function with no brackets
 playAgainButton.on("pointerout", (e) => (e.currentTarget.alpha = 1.0)); // ditto
