@@ -143,7 +143,7 @@ We are only interested in the images in the 2nd row of this sprite sheet:
 
 - **Add the `loadSpriteSheet()` function to main.js:**
 
-![Screenshot](_images/circle-blast-27-pixi5.jpg)
+![Screenshot](_images/circle-blast-27.jpg)
 
 - **Reload the page to be sure that there are no errors.**
 
