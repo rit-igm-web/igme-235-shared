@@ -50,6 +50,8 @@ In this walkthrough we will construct a complete PixiJS game, _Circle Blast!_
 
 Before doing this exercise, you should have completed the entire [web app series](./web-apps-0.md), as well as [pixi-js-1.md](./pixi-js-1.md) and [pixi-js-2.md](./pixi-js-2.md)
 
+> **If you hit a weird Pixi error:** Our CDN loads the latest Pixi release (currently **v8**), but some code out there is for older versions. The [PixiJS v7 → v8 migration notes](./pixi-v7-to-v8-notes.md) have an **"if you see this error" lookup table** at the bottom. Check there first before heading to Slack.
+
 ### Screen shots
 
 #### Start Screen

@@ -57,6 +57,8 @@ and
 
 - https://github.com/kittykatattack/learningPixi
 
+> **Keep this open in a second tab:** [PixiJS v7 → v8 migration notes](./pixi-v7-to-v8-notes.md). Most Pixi tutorials and Stack Overflow answers online were written for v5 / v6 / v7, but our CDN loads Pixi v8, which has a number of breaking changes. The notes cover the common gotchas (drawing API, text stroke, interactive objects, `app.view` vs `app.canvas`, sprite sheet slicing) and have a **"if you see this error" lookup table** at the bottom that will save you a lot of time when you paste in an older example and it does not work.
+
 PixiJS pretty much just gives you _sprites_, but there are many plugins available that give additional functionality:
 
 - https://github.com/pixijs

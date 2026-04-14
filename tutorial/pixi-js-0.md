@@ -11,6 +11,9 @@ Before doing these exercises, you should have completed the entire [web app seri
 - Check out all of the PixiJS resources, sample code, and demos that we link to.
 
 ## IV. The Tutorials
+
+> **Heads-up before you start:** Most PixiJS tutorials, Stack Overflow answers, and example code you will find online were written for Pixi v5, v6, or v7. Our CDN URL loads the **latest** release, which is currently **Pixi v8**, and v8 introduced a number of breaking changes (the Graphics drawing API, text stroke, button interactivity, `app.view` vs `app.canvas`, and more). Keep the [PixiJS v7 → v8 migration notes](./pixi-v7-to-v8-notes.md) open in a second tab while you work. It has a **"if you see this error" lookup table** at the bottom that will save you time.
+
 1. [Intro to PixiJS](./pixi-js-1.md):
     1. PixiJS Resources
     1. "Hello PixiJS"
