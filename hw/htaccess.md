@@ -14,7 +14,7 @@ The overall goal of this exercise is to get some exposure to what’s happening 
 
 2. Set up your 235 Directory (if you haven't done so already)
 
-   1. On your PC, create a directory called **235**. This is where all the work you do from now on will be stored.
+   1. On your PC, create a directory called **235**. This is where all the work you do from now on will be stored.  Please don't get creative here, the directory must be named exactly those 3 characters... no letters, no spaces.
    1. Make sure to save this to a flash drive, your myCourses locker, GitHub, a remote disk, or some other means of backup. Be sure to keep 2 backups: on a removable device (for instance) and some other means in case something happens to that one.
    1. Connect to Banjo using FileZilla or another FTP client
       - Legacy Notes: [How to post to RIT's _banjo_ web server](../notes/posting-to-banjo.md)
