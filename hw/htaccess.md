@@ -158,6 +158,6 @@ Now we will create a password protected directory using authentication.
 You will do the following in the Assignments section of your myCourses shell.
 
 - Submit links to the following (on Banjo):
-  - Link to a non-existent page so that your 404 page automatically loads.
+  - Link to a non-existent page in your account so that your 404 page automatically loads.
   - Link to the error directory, so that the noterror page automatically loads.
   - An https link to your auth page, so that login comes up.
