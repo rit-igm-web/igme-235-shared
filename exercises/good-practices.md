@@ -31,7 +31,7 @@ This can be a team exercise.  **If you are present for the in-person Lab**, your
 ## In the in-person lab, after about 10 minutes, all team representatives should alert the instructor that they are ready to share their findings to the whole class.
 
 ## If you are remote:  You can choose to do it the easier way or the harder, but cooler, way:
-1. Easier: Post the URL to the site(s) that you found above to the "#235-exercise-good-practices" Slack channel and describe what "Good Practice" they exemplify.  What does this site (the good one) do particuarly well or better than other site(s)?
+1. Easier: Post the URL to the site(s) that you found above to the "#235-exercise-sitesN" or "#235-exercise-good-practices" Slack channel (whichever exists in your workspace) and describe what "Good Practice" they exemplify.  What does this site (the good one) do particuarly well or better than other site(s)?
 2. Harder: Present your site using a Screen Recorder.  This is something you'll need to be able to do toward the end of the semester, so it may be worth practicing now, but I realize you're probably busy.  I also don't have time to explain it much except to point you to [this (one of many!) video tutorial about how to record your screen with Open Broadcaster Software](https://www.youtube.com/watch?v=WsNsd5QdOhE) (this one is pretty short and to the point for just doing a simple screen recording)  After recording, upload to YouTube, set to Unlisted (not Private), and share the URL in the "#235-exercise-good-practices" Slack channel.
 
 ## After presentations are over:
