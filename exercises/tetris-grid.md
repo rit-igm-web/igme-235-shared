@@ -249,27 +249,34 @@ You might want to do this part with Firefox so that you can use its awesome grid
 
     Also, since when do tetris blocks fill in from the top?  Since now. Deal with it.   :-)
 
-    Okay, I want to rotate a block.
+	## From this point on, we've recently updated the instructions to change the way rotation works.  Videos that explain or walkthrough this exercise may use an older version of the instructions.
 
-1. Let's try our first CSS Transform on the red "Z" block:
-    ```
+1. Okay, I want to rotate a block.
+
+    Let's try our first CSS transform on the red "Z" block:
+
+    ```css
     #z img {
         transform: rotate(90deg);
     }
     ```
-    It's rotating, but not quite around the right spot... It's rotating around it's own center point.
 
-    I'd prefer to rotate around the top left corner & then shift the whole image about 200 pixels to the right.
+    The image rotates around its center by default. That's the point we want it to rotate around throughout this exercise.
 
-1. First, this style rule will change what part of the image is anchored during rotation:
+    Now let's move the rotated image into position:  
+    (Replace the previous #z img rule with this version:)
 
-    `transform-origin: 0 0;`
+    ```css
+    #z img {
+        transform: translate(-50px, 50px) rotate(90deg);
+    }
+    ```
 
-    Change the transform rule to this:  `transform:  translateX(205px) rotate(90deg);`
+    The `translate()` moves the image horizontally and vertically. Its values differ from what we'd need if we rotated around a corner.
 
-    The order is important... Compare it to:  `transform:  rotate(90deg) translateX(205px);`
+    The order of transform functions matters. Temporarily swap `translate()` and `rotate()` in that declaration and see what changes. Then restore the version shown above.
 
-    Okay, Grid is great for situations where you want things to overlap!  Now we want the red Z to overlap the corner of the yellow "O" block.
+    Okay, Grid is great for situations where you want things to overlap!  Now we want the red Z to sit beside the corner of the yellow "O" block.
 
 1. Use grid-column and grid-row like we did for the "o" and "i" blocks to put the "z" block into position:
     ```
@@ -282,26 +289,30 @@ You might want to do this part with Firefox so that you can use its awesome grid
 
     ***Before you go off doing that***, there's one more thing that we want you to do.  We want you to see how CSS transitions work.  They let you 'tween' between two states of some property of your HTML element... Could be many things from color, to width, to transform!
 
-    Let's put a transition on the tetris blocks so we can make them rotate under our cursor!
+1. Let's put a transition on the Tetris blocks so they rotate when we hover over them.
 
-1. Start by telling all images on the page that if their rotation ever changes, that it should change over a 1 second duration:
-    ```
-    img {
-        transition-property: transform;
-        transition-duration: 2s;
+    Some pieces already use `transform` for their resting position. If we write a new `transform` in a hover rule, it can replace that positioning. Instead, we'll use CSS's individual `rotate` property for the hover effect.
+
+    Add this rule:
+
+    ```css
+    #tetgrid img {
+        transform-origin: center;
+        transition: rotate 2s;
     }
     ```
-    Alone that won't do anything.
 
-    but couple it with this hover rule:
-    ```
-    img:hover {
-        transform: rotate(-90deg);
+    Then add this rule:
+
+    ```css
+    #tetgrid img:hover {
+        rotate: -90deg;
     }
     ```
-    And boy, howdy, do we have an interesting playground, amirite?
-    
-    *Note, this won't work perfectly for all blocks.  This is another challenge for you to work out a way to make all blocks rotate.  Bring this to the instructors attention if you do it, but this one isn't worth extra credit)*
+
+    Hover over each piece. They should rotate around the center of their images. The `rotate` property changes independently of the `transform` declarations used to position the pieces.
+
+    A piece might pass over another piece *while it is moving*. Your final arrangement should have no overlapping colored squares when nothing is being hovered over.
 
 1. Let's add one more interesting interface element:
     Back to your rollover navigation menu:
