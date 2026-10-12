@@ -2,6 +2,11 @@
 ## I. Overview <a id="section1"></a>
 This series of tutorials & notes will get you started in creating web applications, which are *client-server* applications in which the client code runs in a web browser. 
 
+> 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
+> * **Scripting Overview:** Chapter 22 (*Getting Started with JavaScript*), sections **"Meet a Script"** and **"Statements"**.
+> * **Overview of Advanced/Future Web Topics:** Chapter 25 (*Next-Level JavaScript*), sections **"JavaScript Libraries"**, **"JavaScript Frameworks"**, **"JavaScript Beyond the Browser"**, and **"Progressive Web Apps"**.
+> * **Community & Learning Resources:** Chapter 25, sidebar **"Learn with Others"**.
+
 ## II. Prerequisite knowledge <a id="section2"></a>
 - The HTML/CSS which we have covered in this course and in IGME-110
 - CSS selectors (in particular the [CSS3 selectors](https://www.w3.org/TR/css3-selectors/#selectors)) will come in handy
@@ -112,17 +117,17 @@ This course's content is primarily focused on giving students an introduction to
 While we are going to utilize Internet resources in the form of web services, in this course our application code will be 100% on the client machine (the web browser). 
 In later courses (IGME-330 & IGME-430) you will get the opportunity to read/write data to "the cloud", and even have application logic running on remote servers.
 - **Database/Data Modeling** - creating a key:value server utilizing Node.js is covered in IGME-430 (an elective), *Data Modeling* and the SQL language are covered in ISTE-230 (an elective)
-- **Package Managers** - such npm & Bower and other build tools such as Gulp & Grunt are covered in later courses.
+- **Package Managers** - (such as npm) and modern build tools/bundlers (such as Vite or Parcel) are covered in later courses.
 - **Server-side programming** - is covered primarily in IGME-430, but we did already give you a little bit of PHP --> [About this PHP Tutorial Series](./php-0.md)
 - **Web MVC or MVVM Frameworks** - these involve *data binding* and *components* examples include Vue, React and Angular, which are covered in later courses.
 - **Web Games** will be covered later in this course, and we will build several games or interactive experiences using the PixiJS rendering engine. Our course's PixiJS materials can be found here --> [PixiJS Tutorial Series](./pixi-js-0.md)
 - **WebGL** is an implementation of OpenGL ES 2.0 that runs natively in web browsers, and is the fastest way to draw to the browser screen. WebGL shaders may be briefly looked at while we are covering PixiJS.
 
 ## VIII. Resources <a id="section8"></a>
-- http://exploringjs.com/es6/index.html
+- https://exploringjs.com/es6
 - https://developer.mozilla.org
-- http://diveintohtml5.info
-- http://javascript.info
+- https://web.dev/learn
+- https://javascript.info
 
 <hr>
 
