@@ -102,7 +102,7 @@ first = colors.shift(); // remove "red" from beginning
 ```javascript
 colors.unshift("red"); // add "red" back to the front
 ```
-Here's a handy way to remember these various array operations: https://simplestepscode.com/array-push-pop-shift-unshift/
+Here's [a handy way to remember these various array operations](https://rit-igm-web.github.io/igme-235-shared/tutorial/array-methods-mnemonic-animation.html)
 
 ### G. Find the index of an item in the Array
 
@@ -296,6 +296,8 @@ let evenOnly = function(num){return num % 2 == 0};
 //let evenOnly = num => num % 2 == 0; // same thing as an ES6 arrow function
 let filteredArray = numbers.filter(evenOnly); // [2,4]
 ```
+
+* **Textbook Note:** Notice that `.filter()` and `.map()` produce *new* arrays rather than modifying (mutating) the original array in place. This functional approach aligns with modern JavaScript best practices covered in Chapter 25 of *Learning Web Design*.
 
 ### F. Sample code for this section
 #### array-iteration.html
