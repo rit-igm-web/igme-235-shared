@@ -8,10 +8,10 @@ Similarly, if we are going to create web applications, we will have to do the sa
 How do we do this in a web browser? Read on!
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **The Document Object Model (DOM) Architecture:** Chapter 24 (*Working with the DOM and Events*), sections **"The Document Object Model"** and **"The document Object"**.
-> * **Selecting Elements (`querySelector` & `querySelectorAll`):** Chapter 22 (*Getting Started with JavaScript*), section **"Meet a Script"** and Chapter 24, section **"The document Object"**.
-> * **Modifying Elements & Styles (`innerHTML` & `style`):** Chapter 24, sections **"The innerHTML Property"**, **"The innerText Property"**, and **"EXERCISE 24-2. Adding attributes and styles"**.
-> * **Script Timing & Defensive `null` Checks:** Chapter 22, section **"Embedded versus External JavaScript"** and Chapter 23 (*Introduction to JavaScript Programming*), section **"Conditionals"** (testing for truthy/defined elements).
+> * **The Document Object Model (DOM):** Chapter 24 (*Working with the DOM and Events*) → Section **GENERATING NEW MARKUP** → Subsections **The Document Object Model** and **The document Object**
+> * **Selecting & Modifying Content (`innerHTML` vs `innerText`):** Chapter 24 → Section **GENERATING NEW MARKUP** → Subsection **Adding Large Amounts of Text** (Sub-headings **The innerHTML property** and **The innerText property**)
+> * **Script Placement & Loading Order:** Chapter 22 (*Getting Started with JavaScript*) → Section **EMBEDDED VERSUS EXTERNAL JAVASCRIPT**
+> * **Safe Code Execution & Defensive Guard Checks:** Chapter 23 (*Functions, Conditionals, and Loops*) → Subsection **Defensive Programming**
 
 ## Contents
 <!--- Local Navigation --->
@@ -415,4 +415,4 @@ if (element){ // element will be considered true if it is not one of the falsy v
     
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|   **[Intro to JavaScript (chapter 2)](web-apps-2.md)**  |  **[About this Web App Tutorial Series](web-apps-0.md)** | **[More Web Browser DOM Methods (chapter 4)](web-apps-4.md)**
+|   **[Intro to JavaScript (chapter 2)](web-apps-lwd-2.md)**  |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** | **[More Web Browser DOM Methods (chapter 4)](web-apps-lwd-4.md)**
