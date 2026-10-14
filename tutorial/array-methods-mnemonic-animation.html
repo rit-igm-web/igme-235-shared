@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Array Methods Mnemonic</title>
+<style>
+body { margin: 0; background: #fff; }
+</style>
+<style type="text/css">
+
+	.array_methods_container{
+		margin: 0px auto 40px;
+		max-width: 800px;
+		padding: 40px 20px;
+		background-color: #fcfcfa;
+		font-size: 22px;
+		font-family: courier, monospace;
+		color: #333;
+		text-align: center;
+		overflow: hidden;
+		line-height: 1;
+	}
+	@media(min-width: 670px){
+		.array_methods_container{
+			padding: 40px;
+		}
+	}
+
+	.array_display_box{
+		margin: 10px 0px 60px;
+		padding: 30px 10px;
+		background-color: #fed3c3;
+		text-align: center;
+		position: relative;
+	}
+	.array_display_box:after{
+		content: '';
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: #ddfec3;
+		-webkit-animation: array_display_box_after_opacity 2s infinite alternate;
+		animation: array_display_box_after_opacity 2s infinite alternate;
+	}
+
+
+	@-webkit-keyframes array_display_box_after_opacity{
+		0% {opacity: 1;}
+		40% {opacity: 1;}
+		60% {opacity: 0;}
+		100% {opacity: 0;}
+	}
+	@keyframes array_display_box_after_opacity{
+		0% {opacity: 1;}
+		40% {opacity: 1;}
+		60% {opacity: 0;}
+		100% {opacity: 0;}
+	}
+
+	.array_display_box_content{
+		position: relative;
+		z-index: 1;
+		font-size: 16px;
+	}
+	@media(min-width: 400px){
+		.array_display_box_content{
+			font-size: 20px;
+		}
+	}
+
+	.array_display_box span{
+		display: inline-block;
+	}
+
+	.text_unit{
+		display: inline-block;
+	}
+
+
+	.title_words{
+		position: relative;
+		padding-bottom: 30px;
+		font-size: 40px;
+		overflow: hidden;
+	}
+	.array_method_1{
+		-webkit-animation: move_word 2s infinite alternate;
+		animation: move_word 2s infinite alternate;
+	}
+	.array_method_2{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		-webkit-animation: move_word 2s infinite alternate-reverse;
+		animation: move_word 2s infinite alternate-reverse;
+	}
+
+
+	@-webkit-keyframes move_word{
+		0% {-webkit-transform: translateX(0em); opacity: 1;}
+		40% {-webkit-transform: translateX(0em); opacity: 1;}
+		60% {-webkit-transform: translateX(3em); opacity: 0;}
+		100% {-webkit-transform: translateX(3em); opacity: 0;}
+	}
+	@keyframes move_word{
+		0% {transform: translateX(0em); opacity: 1;}
+		40% {transform: translateX(0em); opacity: 1;}
+		60% {transform: translateX(3em); opacity: 0;}
+		100% {transform: translateX(3em); opacity: 0;}
+	}
+
+
+
+	.move_down{
+		-webkit-animation: go_down 2s infinite alternate;
+		animation: go_down 2s infinite alternate;
+		position: relative;
+	}
+	.move_down:before{
+		content: '';
+		position: absolute;
+		top: -0.3em;
+		left: -0.1em;
+		width: 2em;
+		height: 2em;
+		background-color: gold;
+		z-index: -1;
+		border-radius: 50%;
+		-webkit-animation: flare 2s infinite alternate;
+		animation: flare 2s infinite alternate;
+	}
+
+
+
+	@-webkit-keyframes go_down{
+		0% {-webkit-transform: translateY(0em); opacity: 1;}
+		40% {-webkit-transform: translateY(0em); opacity: 1;}
+		60% {-webkit-transform: translateY(3em); opacity: 0;}
+		100% {-webkit-transform: translateY(3em); opacity: 0;}
+	}
+	@keyframes go_down{
+		0% {transform: translateY(0em); opacity: 1;}
+		40% {transform: translateY(0em); opacity: 1;}
+		60% {transform: translateY(3em); opacity: 0;}
+		100% {transform: translateY(3em); opacity: 0;}
+	}
+
+
+	@-webkit-keyframes flare{
+		0% {-webkit-transform: scale(5); opacity: 0;}
+		35% {-webkit-transform: scale(5); opacity: 0;}
+		60% {-webkit-transform: scale(0); opacity: 1;}
+		100% {-webkit-transform: scale(0); opacity: 1;}
+	}
+	@keyframes flare{
+		0% {transform: scale(5); opacity: 0;}
+		35% {transform: scale(5); opacity: 0;}
+		60% {transform: scale(0); opacity: 1;}
+		100% {transform: scale(0); opacity: 1;}
+	}
+
+	.move_left{
+		-webkit-animation: go_left 2s infinite alternate;
+		animation: go_left 2s infinite alternate;
+	}
+
+
+	@-webkit-keyframes go_left{
+		0% {-webkit-transform: translateX(0em);}
+		40% {-webkit-transform: translateX(0em);}
+		60% {-webkit-transform: translateX(-3em);}
+		100% {-webkit-transform: translateX(-3em);}
+	}
+	@keyframes go_left{
+		0% {transform: translateX(0em);}
+		40% {transform: translateX(0em);}
+		60% {transform: translateX(-3em);}
+		100% {transform: translateX(-3em);}
+	}
+
+
+	.vanishing_comma{
+		-webkit-animation: vanish 2s infinite alternate;
+		animation: vanish 2s infinite alternate;
+	}
+
+
+	@-webkit-keyframes vanish{
+		0% {opacity: 1;}
+		30% {opacity: 1;}
+		45% {opacity: 0;}
+		100% {opacity: 0;}
+	}
+	@keyframes vanish{
+		0% {opacity: 1;}
+		30% {opacity: 1;}
+		45% {opacity: 0;}
+		100% {opacity: 0;}
+	}
+
+	</style>
+</head>
+<body>
+<div class="array_methods_container">
+
+		<div>
+			<b>Unshift</b> and <b>shift</b> make the whole array shift sideways.
+		</div>
+		<div class="array_display_box">
+			<div class="array_display_box_content">
+				<div class="title_words">
+					<div class="array_method_1">Unshift</div>
+					<div class="array_method_2">Shift</div>
+				</div>
+				<span class="text_unit">
+					[<span class="move_down">'a'</span><span class="vanishing_comma">,</span>
+					<span class="move_left">'b', 'c', 'd', 'e']</span>
+				</span>
+			</div>
+		</div>
+
+		<div>
+			<b>Push</b> and <b>pop</b> do NOT make the array shift sideways.
+		</div>
+		<div class="array_display_box">
+			<div class="array_display_box_content">
+				<div class="title_words">
+					<div class="array_method_1">Push</div>
+					<div class="array_method_2">Pop</div>
+				</div>
+				<span class="text_unit">
+					['a', 'b', 'c', 'd'<span class="vanishing_comma">,</span> 
+					<span class="move_down">'e'</span><span class="move_left">]</span>
+				</span>
+			</div>
+		</div>
+
+		<div>
+			In each of those pairs (push/pop and unshift/shift),
+			<span class="text_unit"><b>the longer word makes the array longer.</b></span>
+		</div>
+
+	</div>
+
+    <p style="text-align:center; font: 14px/1.5 Arial, sans-serif; color:#666; margin: 0 auto 30px; padding: 0 20px;">
+      Animation and mnemonic by <a href="https://dev.to/yaphi1/javascript-array-push-pop-shift-unshift-how-to-remember-the-difference" target="_blank" rel="noopener noreferrer">Yaphi Berhanu (Simple Steps Code)</a>.
+    </p>
+</body>
+</html>
