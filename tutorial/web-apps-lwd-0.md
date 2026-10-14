@@ -17,11 +17,11 @@ This series of tutorials & notes will get you started in creating web applicatio
 - Be sure to complete the related Study Quiz questions for each section, and do the exercises... some will be assigned in class, others will be assigned as homework.
 
 ## IV. The Tutorials <a id="section4"></a>
-1. [Introduction to Web Applications](./web-apps-1.md):
+1. [Introduction to Web Applications](./web-apps-lwd-1.md):
     1. what is a web app?
     1. what components of the web browser can I program?
     1. what are web standards?
-1. [Introduction to JavaScript](./web-apps-2.md)
+1. [Introduction to JavaScript](./web-apps-lwd-2.md)
     1. a brief history of JavaScript
     1. variables, constants, and "primitive" types
     1. running code in the JavaScript console
@@ -29,7 +29,7 @@ This series of tutorials & notes will get you started in creating web applicatio
     1. common built-in JavaScript objects
     1. type conversion and Falsy/Truthy values
     1. JavaScript's strict mode
-1. [Introduction to the Web Browser DOM](./web-apps-3.md)
+1. [Introduction to the Web Browser DOM](./web-apps-lwd-3.md)
     1. did the HTML elements on the page load?
     1. selecting elements on a web page
     1. modifying elements on a web page
@@ -39,12 +39,12 @@ This series of tutorials & notes will get you started in creating web applicatio
     1. adding code breakpoints in the JavaScript debugger
     1. viewing the value of variables in the JavaScript debugger
     1. dealing with `null` values
-1. [More Web Browser DOM Methods](./web-apps-4.md)
+1. [More Web Browser DOM Methods](./web-apps-lwd-4.md)
     1. the DOM inverted tree
     1. relationships: parent, child & sibling
     1. creating and modifying DOM elements
     1. inserting and deleting DOM elements from the DOM tree
-1. [JavaScript Functions](./web-apps-5.md)
+1. [JavaScript Functions](./web-apps-lwd-5.md)
     1. writing basic functions
     1. function declarations & expressions
     1. functions as *first-class* objects
@@ -52,14 +52,14 @@ This series of tutorials & notes will get you started in creating web applicatio
     1. Variable "hoisting" and the "Temporal Dead Zone"
     1. ES6 Arrow Functions
     1. more practice with the debugger
-1. [JavaScript Events & the `this` keyword](./web-apps-6.md)
+1. [JavaScript Events & the `this` keyword](./web-apps-lwd-6.md)
     1. event handlers
     1. utilizing function declarations, expressions, and arrow functions
     1. `addEventListener()`, `removeEventListener()`
     1. adding properties to elements with `element.dataset`
     1. values of `this` in regular functions and arrow functions
     1. the `window.onload` event
-1. [JavaScript Object Literals](./web-apps-7.md)
+1. [JavaScript Object Literals](./web-apps-lwd-7.md)
     1. creating Object literals with properties and methods
     1. iterating over object keys and values
     1. creating "Object Factories"
@@ -67,17 +67,17 @@ This series of tutorials & notes will get you started in creating web applicatio
     1. value types & reference types
     1. another look at `const`
     1. controlling object mutability with `Object.seal()` and `Object.freeze()`
-1. [JavaScript Arrays and array-like objects](./web-apps-8.md)
+1. [JavaScript Arrays and array-like objects](./web-apps-lwd-8.md)
     1. methods of `Array`
     1. looping through `Array` - `for`, `for...of`, `.forEach()`, `.filter()`, `.map()`
     1. `NodeList`
     1. JavaScript typed arrays
     1. method chaining & fluent interfaces
-1. [The WebStorage API](./web-apps-9.md)
+1. [The WebStorage API](./web-apps-lwd-9.md)
     1. `localStorage.setItem(key,value)`
     1. `localStorage.getItem(key)`
     1. serializing (stringifying) objects for storage 
-1. [Intro to Web Services](./web-apps-10.md)
+1. [Intro to Web Services](./web-apps-lwd-10.md)
     1. AJAX v. Ajax
     1. JSON
     1. Utilizing `XMLHttpRequest` (XHR)
