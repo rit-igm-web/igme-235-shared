@@ -4,10 +4,11 @@
 Now we will see how we can program by utilizing the *JavaScript Engine* of a web browser. We will learn about the core JavaScript data types, how to declare variables, and how to see program output and view errors in the JavaScript console.
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **JavaScript History & Language Standards:** Chapter 22 (*Getting Started with JavaScript*), sidebar **"Learning JavaScript"** (Ecma International and ECMAScript evolution).
-> * **Variables (`let`, `const`, `var`) & Data Types:** Chapter 22, sections **"Variables"**, **"Numbers and Math"**, and **"Working with Text Strings"**.
-> * **Console REPL & Testing:** Chapter 22, section **"The JavaScript Console"** and **"EXERCISE 22-6. Using the console"**.
-> * **Truthy/Falsy Evaluation & Booleans:** Chapter 23 (*Introduction to JavaScript Programming*), section **"Booleans"** and section **"Conditionals"**.
+> * **JavaScript History & Language Standards:** Chapter 22 (*Getting Started with JavaScript*) → Section **MEET A SCRIPT** → Sidebar **Learning JavaScript**
+> * **Statements, Syntax & First Script:** Chapter 22 → Section **STATEMENTS** and **EXERCISE 22-1. Your first script**
+> * **Variables (`let`, `const`), Math & Strings:** Chapter 22 → Sections **NUMBERS AND MATH**, **STRINGS**, and **VARIABLES** (Subsection **Declaring Variables with let**)
+> * **DevTools Console & Testing:** Chapter 22 → Section **THE JAVASCRIPT CONSOLE** and **EXERCISE 22-6. Using the console**
+> * **Truthy / Falsy Evaluation:** Chapter 23 (*Functions, Conditionals, and Loops*) → Sidebar **true/false and Truthy/Falsy**
 
 ## Contents
 <!--- Local Navigation --->
