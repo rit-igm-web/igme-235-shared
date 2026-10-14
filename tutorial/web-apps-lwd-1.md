@@ -93,4 +93,4 @@ The best web site for tracking the adoption of new browser capabilities:
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|   :-\  |  **[About this Web App Tutorial Series](web-apps-0.md)** | **[Intro to JavaScript (chapter 2)](web-apps-2.md)**
+|   :-\  |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** | **[Intro to JavaScript (chapter 2)](web-apps-lwd-2.md)**
