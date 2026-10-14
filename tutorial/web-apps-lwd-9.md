@@ -4,9 +4,8 @@
 The HTML5 WebStorage API allows us to store **key:value** data in the user's browser, and that information can be retrieved at a later date by your JavaScript (when the user returns to your page).
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Browser Storage & `localStorage` Fundamentals:** Chapter 24 (*Working with the DOM and Events*), section **"Web Storage"** (in Exercise 24-4 sidebar: storing key/value pairs, persistence across page reloads).
-> * **JSON & Object Serialization (`JSON.stringify` / `JSON.parse`):** Chapter 25 (*Next-Level JavaScript*), sidebar **"JSON"** (JavaScript Object Notation rules and converting structured data to string format).
-> * **Client-Side Data Persistence in Web Apps:** Chapter 25, section **"Progressive Web Apps"** (offline data retention and browser storage capabilities).
+> * **Browser Data Persistence (`localStorage`):** Chapter 24 (*Working with the DOM and Events*) → Section **REFACTORING FOR ACCESSIBILITY** → Sidebar **Web Storage**
+> * **JSON & Object Serialization (`JSON.stringify` / `JSON.parse`):** Chapter 25 (*Next-Level JavaScript*) → Section **PROGRESSIVE WEB APPS** → Subsection **Web app manifest** (Sidebar **JSON**)
 
 ## Contents
 <!--- Local Navigation --->
@@ -159,4 +158,4 @@ One big issue with the applications we have written this semester is that reload
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|    **[JavaScript Arrays (chapter 8)](web-apps-8.md)** |  **[About this Web App Tutorial Series](web-apps-0.md)** |  **[Web Services (chapter 10)](web-apps-10.md)**
+|    **[JavaScript Arrays (chapter 8)](web-apps-lwd-8.md)** |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** |  **[Web Services (chapter 10)](web-apps-lwd-10.md)**
