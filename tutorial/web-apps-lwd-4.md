@@ -4,11 +4,10 @@
 Today we are going to look at alternatives to `.innerHTML` that can be used to **"CRUD"** (i.e. Create, Read, Update, Delete) HTML elements in the web browser.
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **The DOM Node Hierarchy & Relationships:** Chapter 24 (*Working with the DOM and Events*), section **"The Document Object Model"** (understanding element, text, and attribute nodes).
-> * **Creating & Inserting Elements:** Chapter 24, section **"Creating and Inserting Element Nodes"** (`createElement()`, `appendChild()`, `insertBefore()`, `removeChild()`).
-> * **Creating Text Nodes:** Chapter 24, section **"Creating and Inserting Text Nodes"** (`createTextNode()`, `nodeValue`).
-> * **Modifying & Reading Attributes:** Chapter 24, section **"Creating, Updating, and Removing Attribute Nodes"** (`getAttribute()`, `setAttribute()`, and attribute properties).
-> * **Comparing DOM Methods vs `innerHTML`:** Chapter 24, section **"The innerHTML Property"** (surgical DOM methods vs large-scale markup insertion).
+> * **The DOM Node Hierarchy:** Chapter 24 (*Working with the DOM and Events*) → Section **GENERATING NEW MARKUP** → Subsection **The Document Object Model**
+> * **Creating & Inserting Element Nodes:** Chapter 24 → Subsection **Creating and Inserting Element Nodes** (`appendChild()`, `insertBefore()`, `removeChild()`) and **EXERCISE 24-1. Building a Button**
+> * **Creating & Updating Text Nodes:** Chapter 24 → Subsection **Creating and Inserting Text Nodes** (Sub-heading **The createTextNode() method** and Sub-heading **The nodeValue property**)
+> * **Managing Element Attributes & Classes:** Chapter 24 → Subsection **Creating, Updating, and Removing Attribute Nodes** (Sub-headings **The getAttribute() and setAttribute() methods**, **Attribute properties**, and **Working with the class attribute**) and **EXERCISE 24-2. Adding attributes**
 
 ## Contents
 <!--- Local Navigation --->
@@ -438,4 +437,4 @@ All HTML elements inherit from the `Node` class. Once we have selected an elemen
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|   **[Intro to the Web Browser DOM (chapter 3)](web-apps-3.md)**  |  **[About this Web App Tutorial Series](web-apps-0.md)** | **[JavaScript Functions (chapter 5)](web-apps-5.md)**
+|   **[Intro to the Web Browser DOM (chapter 3)](web-apps-lwd-3.md)**  |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** | **[JavaScript Functions (chapter 5)](web-apps-lwd-5.md)**
