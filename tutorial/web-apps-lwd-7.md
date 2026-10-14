@@ -12,10 +12,10 @@ In most languages it is impossible to add new properties and methods to an exist
 **Creating objects in JavaScript can be much easier, you can skip step #1 (creating a template), and move directly to step #2 (creating an instance). You can also easily add properties and methods to existing objects.**
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Objects & Dot Notation:** Chapter 22 (*Getting Started with JavaScript*), sidebar **"Objects and Dot Notation"**.
-> * **Object Methods & Namespacing:** Chapter 23 (*Functions, Conditionals, and Loops*), sidebar **"Methods"** and section **"Namespacing"** (attaching properties and methods to namespace object literals).
-> * **Value Types vs Reference Types & `const` Bindings:** Chapter 22, section **"Variables"** and Chapter 25 (*Next-Level JavaScript*), section **"Web Components"** (discussion of object properties, mutability, and `class` syntax as object templates).
-> * **JSON & Object Serialization Preview:** Chapter 25, sidebar **"JSON"** (JavaScript Object Notation syntax rules).
+> * **Objects & Dot Notation:** Chapter 22 (*Getting Started with JavaScript*) → Sidebar **Objects and Dot Notation**
+> * **Object Methods & Method Syntax:** Chapter 23 (*Functions, Conditionals, and Loops*) → Sidebar **Methods**
+> * **Namespacing with Object Literals:** Chapter 23 → Sidebar **Namespacing**
+> * **Object Blueprints & Classes:** Chapter 25 (*Next-Level JavaScript*) → Section **WEB COMPONENTS** (discussion of JavaScript classes as object recipes)
 
 ## Contents
 <!--- Local Navigation --->
@@ -469,4 +469,4 @@ For more information on object literals, head here: http://exploringjs.com/es6/c
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|    **[JavaScript Events (chapter 6)](web-apps-6.md)** |  **[About this Web App Tutorial Series](web-apps-0.md)** |  **[JavaScript Arrays (chapter 8)](web-apps-8.md)**
+|    **[JavaScript Events (chapter 6)](web-apps-lwd-6.md)** |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** |  **[JavaScript Arrays (chapter 8)](web-apps-lwd-8.md)**
