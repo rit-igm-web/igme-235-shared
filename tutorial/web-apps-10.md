@@ -12,7 +12,7 @@ In this course, we are just going to scratch the surface and work with the "read
 
 - Web services (aka Web APIs) can be used to return informations such as the weather, mapping, nearby restaurants and other place information, photos & videos and so on. There are also services that let the developer store user data in "the cloud" where it will be available from any machine the user logs into (Google's Firebase is one such service).
 
-- Some examples of web services can be found on this page: [sample-web-services.md](../tutorial/web-service-app-starters.md)
+- Some examples of web services can be found on this page: [web-service-app-starters.md](../tutorial/web-service-app-starters.md)
 
 ## III. Downloading remote data via _Ajax_
 
