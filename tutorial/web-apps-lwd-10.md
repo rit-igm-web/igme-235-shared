@@ -7,9 +7,9 @@ Reading and writing data to and from the Internet, whether to/from your own serv
 In this course, we are just going to scratch the surface and work with the "read only" Web, in this case, by utilizing a web service to search for and display animated GIFs.
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Asynchronous Programming & Promises:** Chapter 25 (*Next-Level JavaScript*), sidebar **"Promises and Asynchronous Code"**.
-> * **JSON Data Format (`JSON.stringify` / `JSON.parse`):** Chapter 25, sidebar **"JSON"** (JavaScript Object Notation structure and key/value rules).
-> * **Fetch API & Network Requests:** Chapter 25, section **"JavaScript Libraries"** and section **"Progressive Web Apps"** (handling asynchronous data exchange).
+> * **Asynchronous Programming & Network Requests:** Chapter 25 (*Next-Level JavaScript*) → Sidebar **Promises and Asynchronous Code**
+> * **JSON Data Exchange:** Chapter 25 → Section **PROGRESSIVE WEB APPS** → Subsection **Web app manifest** (Sidebar **JSON**)
+> * **Remote API Integration & Libraries:** Chapter 25 → Section **JAVASCRIPT LIBRARIES**
 
 ## II. What is a Web Service?
 
@@ -60,4 +60,4 @@ The best way to see how Ajax and Web APIs work is to build a fully functioning e
 
 | <-- Previous Unit                           | Home                                                    | Next Unit --> |
 | ------------------------------------------- | ------------------------------------------------------- | ------------- |
-| **[WebStorage (chapter 9)](web-apps-9.md)** | **[About this Web App Tutorial Series](web-apps-0.md)** | :-\           |
+| **[WebStorage (chapter 9)](web-apps-lwd-9.md)** | **[About this Web App Tutorial Series](web-apps-lwd-0.md)** | :-\           |
