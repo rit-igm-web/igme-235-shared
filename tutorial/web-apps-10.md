@@ -47,7 +47,7 @@ In this course, we are just going to scratch the surface and work with the "read
 
 The best way to see how Ajax and Web APIs work is to build a fully functioning example - if you haven't done so yet, go ahead and build _GIF Finder_, which utilizes the Giphy Web Service:
 
-- [HW-gif-finder.md](./HW-gif-finder.md)
+- [HW-gif-finder-lab.md](./HW-gif-finder-lab.md)
 
 <hr><hr>
 
