@@ -495,4 +495,4 @@ You can read more about strict mode here:
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|   **[Intro to Web Applications (chapter 1)](web-apps-1.md)**  |  **[About this Web App Tutorial Series](web-apps-0.md)** | **[Intro to Web Browser DOM (chapter 3)](web-apps-3.md)**
+|   **[Intro to Web Applications (chapter 1)](web-apps-lwd-1.md)**  |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** | **[Intro to Web Browser DOM (chapter 3)](web-apps-lwd-3.md)**
