@@ -10,11 +10,10 @@ And learn more about events here:
 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **JavaScript Events & Event Listeners:** Chapter 24 (*Working with the DOM and Events*), sections **"JavaScript Events"** and **"Event Handlers and Event Listeners"** (`addEventListener()`, `removeEventListener()`).
-> * **Passing Function References (Callbacks):** Chapter 23 (*Functions, Conditionals, and Loops*), section **"Functions"** and Chapter 24, section **"Event Handlers and Event Listeners"**.
-> * **The `this` Keyword & Arrow Functions:** Chapter 25 (*Next-Level JavaScript*), sidebar **"Arrow Functions"** (dynamic `this` binding in standard functions vs. lexical `this` in arrow functions).
-> * **HTML5 Custom Data Attributes:** Chapter 24, section **"Data Attributes"** (`data-*` attributes and the `element.dataset` property).
-> * **Script Execution Timing (`window.onload`):** Chapter 24, section **"UI as a Progressive Enhancement"** (event lifecycle and window load events).
+> * **JavaScript Events & Event Handlers:** Chapter 24 (*Working with the DOM and Events*) → Section **JAVASCRIPT EVENTS** → Subsection **Handling Events** (Sub-heading **Property-based event handlers**)
+> * **Event Listeners (`addEventListener`):** Chapter 24 → Section **JAVASCRIPT EVENTS** → Subsection **Handling Events** (Sub-heading **Event listeners**) and **EXERCISE 24-3. Now it clicks!**
+> * **Event Lifecycle & Propagation:** Chapter 24 → Sidebar **Event Propagation**
+> * **The `this` Keyword vs Arrow Functions:** Chapter 25 (*Next-Level JavaScript*) → Sidebar **Arrow Functions**
 
 ## Contents
 <!--- Local Navigation --->
@@ -427,4 +426,4 @@ If we use the `window.onload` event handler, we can move our code back up to the
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|    **[JavaScript Functions (chapter 5)](web-apps-5.md)** |  **[About this Web App Tutorial Series](web-apps-0.md)** |  **[JavaScript Object Literals (chapter 7)](web-apps-7.md)**
+|    **[JavaScript Functions (chapter 5)](web-apps-lwd-5.md)** |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** |  **[JavaScript Object Literals (chapter 7)](web-apps-lwd-7.md)**
