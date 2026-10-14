@@ -10,11 +10,11 @@ Functions contain a sequence of statements called the *function body*. There are
 Here is a short,  well-written page that explains what and why these two concepts are important - please take the time to read it: https://www.cs.utah.edu/~zachary/computing/lessons/uces-10/uces-10/node11.html
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Function Fundamentals & Syntax:** Chapter 23 (*Functions, Conditionals, and Loops*), sections **"Functions"**, **"Declaring a Function"**, **"Naming a Function"**, and **"Calling a Function"**.
-> * **Parameters, Arguments & Return Values:** Chapter 23, sections **"Passing Values to a Function"** and **"Returning a Value from a Function"**.
-> * **Variable Scope (`let`/`const` vs `var`):** Chapter 23, section **"Variable Scope"** (Function scope, Block scope, and Global scope) and Chapter 22, sidebar **"The var Keyword"**.
-> * **Refactoring for Reusability (D.R.Y.):** Chapter 23, section **"Functions"** (discussion of Don't Repeat Yourself principle and Exercise 23-1).
-> * **Modern Arrow Functions:** Chapter 25 (*Next-Level JavaScript*), sidebar **"Arrow Functions"** (concise body vs block body syntax).
+> * **Function Declarations, Syntax & Calling:** Chapter 23 (*Functions, Conditionals, and Loops*) → Section **FUNCTIONS** → Subsections **Declaring a Function**, **Naming a Function**, and **Calling a Function**
+> * **Parameters, Arguments & Return Values:** Chapter 23 → Section **FUNCTIONS CAN RECEIVE AND RETURN INFORMATION** → Sidebar **Returning a Value from a Function** and Subsection **Flexible Functions**
+> * **Variable Scope (`let`/`const` vs Global):** Chapter 23 → Section **FUNCTIONS CAN RECEIVE AND RETURN INFORMATION** → Sidebar **Global scope**
+> * **Namespacing Practices:** Chapter 23 → Sidebar **Namespacing**
+> * **Modern Arrow Functions:** Chapter 25 (*Next-Level JavaScript*) → Sidebar **Arrow Functions**
 
 ## Contents
 <!--- Local Navigation --->
@@ -553,4 +553,4 @@ This "auto creation" of global properties is a feature you probably don't want t
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|    **[More Web Browser DOM Methods (chapter 4)](web-apps-4.md)** |  **[About this Web App Tutorial Series](web-apps-0.md)** |  **[JavaScript Events (chapter 6)](web-apps-6.md)**
+|    **[More Web Browser DOM Methods (chapter 4)](web-apps-lwd-4.md)** |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** |  **[JavaScript Events (chapter 6)](web-apps-lwd-6.md)**
