@@ -8,11 +8,10 @@ Unlike primitive arrays (Int, Float etc) in languages like C, JavaScript arrays 
 JavaScript arrays are *objects*, and thus have properties and methods like other objects do. 
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Array Fundamentals & Indexing:** Chapter 23 (*Functions, Conditionals, and Loops*), section **"Arrays"** (bracket notation `[index]`, length property `.length`, and zero-indexing).
-> * **Iterating Over Collections (`for`, `for...of`):** Chapter 23, section **"Loops"** and section **"Iterating over Elements Using Loops"**.
-> * **NodeLists vs. Arrays:** Chapter 23, section **"Iterating over Elements Using Loops"** (understanding why `querySelectorAll()` returns an array-like `NodeList`).
-> * **Functional Iteration Methods (`forEach`, `map`, `filter`):** Chapter 23, section **"Functions"** (passing callbacks to iteration methods) and Chapter 25 (*Next-Level JavaScript*), sidebar **"Arrow Functions"**.
-> * **Method Chaining & Fluent Interfaces:** Chapter 25, section **"JavaScript Libraries"** (chaining method calls for concise data transformation).
+> * **Array Structure & Indexing:** Chapter 23 (*Functions, Conditionals, and Loops*) → Section **ARRAYS** → Subsection **Using the Array Index**
+> * **Looping Over Collections (`for` loop):** Chapter 23 → Section **LOOPS** → Subsections **The for Loop** and **Iterating over Elements Using Loops**
+> * **NodeLists vs True Arrays:** Chapter 23 → Section **LOOPS** → Subsection **Iterating over Elements Using Loops**
+> * **Functional Array Methods & Callback Functions:** Chapter 25 (*Next-Level JavaScript*) → Sidebar **Arrow Functions**
 
 ## Contents
 <!--- Local Navigation --->
@@ -542,4 +541,4 @@ let array4 = [...allNodes];
 
 | <-- Previous Unit | Home | Next Unit -->
 | --- | --- | --- 
-|    **[JavaScript Object Literals (chapter 7)](web-apps-7.md)** |  **[About this Web App Tutorial Series](web-apps-0.md)** |  **[Web Storage (chapter 9)](web-apps-9.md)**
+|    **[JavaScript Object Literals (chapter 7)](web-apps-lwd-7.md)** |  **[About this Web App Tutorial Series](web-apps-lwd-0.md)** |  **[Web Storage (chapter 9)](web-apps-lwd-9.md)**
