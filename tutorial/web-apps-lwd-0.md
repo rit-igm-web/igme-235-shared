@@ -3,9 +3,9 @@
 This series of tutorials & notes will get you started in creating web applications, which are *client-server* applications in which the client code runs in a web browser. 
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Scripting Overview:** Chapter 22 (*Getting Started with JavaScript*), sections **"Meet a Script"** and **"Statements"**.
-> * **Overview of Advanced/Future Web Topics:** Chapter 25 (*Next-Level JavaScript*), sections **"JavaScript Libraries"**, **"JavaScript Frameworks"**, **"JavaScript Beyond the Browser"**, and **"Progressive Web Apps"**.
-> * **Community & Learning Resources:** Chapter 25, sidebar **"Learn with Others"**.
+> * **Scripting Overview:** Chapter 22 (*Getting Started with JavaScript*) → Section **MEET A SCRIPT** → Sidebar **Learning JavaScript**
+> * **Interactive Console Overview:** Chapter 22 (*Getting Started with JavaScript*) → Section **THE JAVASCRIPT CONSOLE** → Sidebar **Finding the Developer Tools**
+> * **Advanced Tooling & Frameworks Overview:** Chapter 25 (*Next-Level JavaScript*) → Sections **JAVASCRIPT LIBRARIES**, **JAVASCRIPT FRAMEWORKS**, Sidebar **TypeScript**, and Sidebar **Learn with Others**
 
 ## II. Prerequisite knowledge <a id="section2"></a>
 - The HTML/CSS which we have covered in this course and in IGME-110
