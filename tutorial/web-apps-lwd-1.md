@@ -3,10 +3,10 @@
 First we will discuss what a *web app* is, and take look at the different components of a web browser that a developer is able to program.
 
 > 📖 **Textbook Companion Reading — Learning Web Design (6th ed.)**
-> * **Browser Architecture & Script Execution:** Chapter 22 (*Getting Started with JavaScript*), section **"Meet a Script"**.
-> * **Browser Developer Tools & Console:** Chapter 22, section **"The JavaScript Console"** and sidebar **"Finding the Developer Tools"**.
-> * **Web APIs & Compatibility Tracking:** Chapter 25 (*Next-Level JavaScript*), sidebar **"Can I Use?"** and section **"Polyfills and Transpilers"**.
-> * **Web Standards Bodies & Evolution:** Chapter 22 (*Getting Started with JavaScript*), sidebar **"Learning JavaScript"** (Ecma International, W3C, and WHATWG) and Chapter 25, sidebar **"The Road to Standardization"**.
+> * **Browser Architecture & Script Execution:** Chapter 22 (*Getting Started with JavaScript*) → Section **MEET A SCRIPT**
+> * **Browser Developer Tools & Console:** Chapter 22 (*Getting Started with JavaScript*) → Section **THE JAVASCRIPT CONSOLE** → Sidebar **Finding the Developer Tools**
+> * **Web Standards & Compatibility:** Chapter 22 (*Getting Started with JavaScript*) → Sidebar **Learning JavaScript** and Chapter 25 (*Next-Level JavaScript*) → Sidebar **Web Component–Related Standards**
+> * **Progressive Enhancement & Web Capabilities:** Chapter 24 (*Working with the DOM and Events*) → Section **UI AS A PROGRESSIVE ENHANCEMENT** and Chapter 25 (*Next-Level JavaScript*) → Section **PROGRESSIVE WEB APPS**
 
 ## Contents
 <!--- Local Navigation --->
