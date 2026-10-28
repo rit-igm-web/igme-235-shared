@@ -538,7 +538,7 @@ D. You may have noticed **global** variable scope above. How can you add variabl
 1. Use the `var` keyword outside of a function definition  (we will avoid using `var` in this class)
 2. Every time you give an element an `id` value, you are actually creating a property on the global `.window` object. You can read about this here:
 
-http://2ality.com/2012/08/ids-are-global.html
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id
 
 This "auto creation" of global properties is a feature you probably don't want to use in your code, but you need to be aware of it because it can cause quirky behavior in your programs depending on how you "id" your elements.
 
