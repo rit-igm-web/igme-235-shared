@@ -477,14 +477,15 @@ V. [GIPHY API using Fetch](#fetch)
 <a id="anime-schedule-finder"></a>
 
 ## III. Anime Schedule Finder API
-- The *Jikan Unofficial MyAnimeList API* docs can be found here: https://jikan.docs.apiary.io/
-- This API does not currently require an API key
-- This API has a lot of endpoints!
-- Challenges - add code that:
-  - shows an image for each anime
-  - shows the synopsis for each anime
-  - shows the genres for each anime
-- PS: making the user type in the day of the week is horrible, awful usability. If you end up using this endpoint, be sure to have the days of the week pre-populated in a pulldown!
+- The *Tenrai Anime API* documentation can be found here: https://api.tenrai.org/documentation
+- This API does not currently require an API key.
+- This API has lots of endpoints to explore!
+- **Challenges** — Add code that:
+  - Shows an image for each anime.
+  - Shows the synopsis for each anime.
+  - Shows the genres for each anime.
+- **P.S.** Making users type in the day of the week is horrible, awful usability! If you use this endpoint, be sure to provide a pulldown menu with the days of the week already populated!
+
 
 **anime-schedule-xhr.html (recommended method for IGME 235)**
 
@@ -506,7 +507,7 @@ V. [GIPHY API using Fetch](#fetch)
 	let term = ""; // we declared `term` out here because we will need it later
 	function getData(){
 		// 1 - main entry point to web service
-		const SERVICE_URL = "https://api.jikan.moe/v3/schedule/";
+		const SERVICE_URL = "https://api.tenrai.org/v1/schedules?filter=";
 		
 		// No API Key required!
 		
@@ -567,8 +568,7 @@ V. [GIPHY API using Fetch](#fetch)
 		}
 		
 		// 5 - if there is an array of results, loop through them
-		// this is a weird API, the name of the key is the day of the week you asked for
-		let results = obj[term];
+		let results = obj.data;
 		if(!results){
 			document.querySelector("#content").innerHTML = `<p><i>Problem! <b>No results for "${term}"</b></i></p>`;
 			return;
@@ -632,7 +632,7 @@ V. [GIPHY API using Fetch](#fetch)
 	let term = ""; // we declared `term` out here because we will need it later
 	function getData(){
 		// 1 - main entry point to web service
-		const SERVICE_URL = "https://api.jikan.moe/v3/schedule/";
+		const SERVICE_URL = "https://api.tenrai.org/v1/schedules?filter=";
 		
 		// No API Key required!
 		
@@ -678,8 +678,7 @@ V. [GIPHY API using Fetch](#fetch)
 		}
 		
 		// 7 - if there is an array of results, loop through them
-		// this is a weird API, the name of the key is the day of the week you asked for
-		let results = obj[term];
+		let results = obj.data;
 		if(!results){
 			document.querySelector("#content").innerHTML = `<p><i>Problem! <b>No results for "${term}"</b></i></p>`;
 			return;
