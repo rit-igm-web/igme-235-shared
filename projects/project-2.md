@@ -46,7 +46,7 @@ For this project you are creating a JavaScript driven Web application that utili
 - You may get familiar with and use one of the APIs from this list:
   - Because APIs change from time to time this is not a guarantee that these APIs will be smooth sailing, but they have been shown to work.
     - Dog API\*: https://dog.ceo/dog-api/
-    - Jikan Unofficial MyAnimeList API\*: https://jikan.docs.apiary.io/
+    - Tenrai Unofficial MyAnimeList API\*: https://api.tenrai.org/documentation
     - The Amiibo API\*: https://www.amiiboapi.org
       - \*Starters for the above 3 APIs can be found in the [web-service-app-starters.md](../tutorial/web-service-app-starters.md)
     - REST Countries: https://restcountries.com/  
