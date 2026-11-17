@@ -1,4 +1,4 @@
-# Project 3 Proposal — Extra Guidance and Examples
+# Project 3 Proposal: Extra Guidance and Examples
 
 > **Optional reading:** The [Project 3 assignment](project-3.md) lists everything your proposal must include. This page offers examples and questions to help you develop your ideas. **It does not add any requirements.** You do not need to use these headings or answer every question here.
 
