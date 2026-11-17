@@ -107,7 +107,9 @@ You may format this in any way that you want, but break each bulleted item below
 - Other: Anything else that you like to say, like discuss external libraries you'd like to use, etc.
 - About the developer: Give your name/major/minor/year and your skill set/interests.
 
-Here is a template document of sorts, once used in another class. It contains some extra examples and tips for what we're looking for. You should only really pay attention to the part above the first thick red line: http://igm.rit.edu/~acjvks/courses/2017-fall/590-ios-game/html/project-1-proposal.html The rest of it was for another assignment specific to that course.
+**Want some extra guidance?**
+
+If you're having trouble figuring out what to write, take a look at our [Project 3 Proposal: Extra Guidance and Examples](project-3-proposal-guidance.md). It includes examples, suggestions, and questions to help you develop your ideas. It's entirely optional and doesn't add any requirements beyond those listed above.
 
 ## VI. Documentation
 
